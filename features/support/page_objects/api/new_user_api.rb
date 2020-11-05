@@ -8,9 +8,9 @@ class NewUserApi
             "admissao": dadosyaml["#{$tagscenario}"]["admissao"],
             "cargo": dadosyaml["#{$tagscenario}"]["cargo"],
             "comissao": dadosyaml["#{$tagscenario}"]["comissao"],
-            "cpf": dadosyaml["#{$tagscenario}"]["cpf"],
+            "cpf": Faker::IDNumber.brazilian_citizen_number(formatted: true),
             "departamentoId": dadosyaml["#{$tagscenario}"]["departamentoId"],
-            "nome": dadosyaml["#{$tagscenario}"]["nome"],
+            "nome": Faker::Name.name,
             "salario": dadosyaml["#{$tagscenario}"]["salario"],
             "sexo": dadosyaml["#{$tagscenario}"]["sexo"],
             "tipoContratacao": dadosyaml["#{$tagscenario}"]["tipoContratacao"]
@@ -44,24 +44,23 @@ class NewUserApi
             },
             body: @body
         )
-        return @response
     end
 
-    def response_code(response)
-        response.code.to_s
+    def response_code
+        @response.code
     end
 
-    def validarJsonTemplate(templatejson,response)
-        JSON::Validator.validate!("#{Dir.pwd}/features/support/api/schemas_model/#{templatejson}.json", response.body)
+    def response_data
+        @response
     end
 
     def record_user_response
-        record_user_response = YAML.load(File.read(%-#{Dir.pwd}/features/support/data/test_data.yaml-))
+        record_user_response = YAML.load_file(File.join(Dir.pwd, "/features/support/data/api_data.yaml"))
         record_user_response["last_id_user_api"]["nome"] = @response['nome']
         record_user_response["last_id_user_api"]["cpf"] = @response['cpf']
         record_user_response["last_id_user_api"]["id"] = @response['empregadoId']
 
-        File.open("#{Dir.pwd}/features/support/data/test_data.yaml", 'w') {
+        File.open("#{Dir.pwd}/features/support/data/api_data.yaml", 'w') {
             |f| f.write record_user_response.to_yaml 
         }
     end

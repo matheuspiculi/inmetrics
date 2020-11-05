@@ -9,12 +9,8 @@ Quando("enviar a solicitação post para o endereço {string}") do |url|
     @response = @new_user_api.post_data(url)
 end
 
-Então("o retorno do serviço deverá ser {string}") do |code|
-    expect(@new_user_api.response_code(@response)).to eq code
-end
-
-Então("o response deverá possuir os campos corretamente") do
-    #@new_user_api.validarJsonTemplate("api_cadastrar_usuario_sucesso",@response)
+Então("o retorno do serviço deverá ser {int}") do |code|
+    expect(@new_user_api.response_code).to eq code
 end
 
 Dado("que esteja enviando os dados {string} {string} {string} {string} {string} {string} {string} {int} {string}") do |admissao, cargo, comissao, cpf, nome, salario, sexo, departamento, tipocontratacao|
@@ -22,6 +18,9 @@ Dado("que esteja enviando os dados {string} {string} {string} {string} {string} 
 end
 
 Então("a mensagem deverá ser {string}") do |message|
-    expect(@response[0]).to eq message
+    expect(@new_user_api.response_data).to include message
 end
 
+E("também deverá salvar o id, nome, cpf do usuário para realizar consultas futuras") do
+    @new_user_api.record_user_response
+end

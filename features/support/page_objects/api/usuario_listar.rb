@@ -35,7 +35,7 @@ class ConsultUserApi
         @response.code
     end
 
-    def response_codename
-        @response.message
+    def response_data
+        @response
     end
 end

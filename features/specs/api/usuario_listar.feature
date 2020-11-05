@@ -19,12 +19,12 @@ Funcionalidade: Listar usuários
   Cenário: Listar todos os empregados
     Dado as credenciais invalidas
     Quando realizo a consulta "empregado/list_all"
-    Então o retorno do serviço deverá ser "401"
+    Então o response do serviço da consulta deverá ser 401
 
   @api_listar_usuario_todos_404
   Cenário: Erro 404
     Quando realizo a consulta "empregado/list_all/a"
-    Então o retorno do serviço deverá ser "404"
+    Então o response do serviço da consulta deverá ser 404
 
   @api_listar_usuario_especifico
   Cenário: Buscar um empregado especifico
@@ -46,10 +46,10 @@ Funcionalidade: Listar usuários
     Dado as credenciais invalidas
     E o empregado "2541"
     Quando realizo a consulta "empregado/list"
-    Então o retorno do serviço deverá ser "401"
+    Então o response do serviço da consulta deverá ser 400
 
   @api_listar_usuario_especifico_404
   Cenário: Erro 404
     Dado o empregado "2541"
     Quando realizo a consulta "empregado/lists"
-    Então o retorno do serviço deverá ser "404"
+    Então o response do serviço da consulta deverá ser 404

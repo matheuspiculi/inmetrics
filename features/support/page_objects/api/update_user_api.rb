@@ -8,30 +8,31 @@ class UpdateUserApi
     end
 
     def data_user
+        dadosyaml = load_data_test("api")
         @body = {
-            "admissao": "04/11/2020",
-            "cargo": "Executive",
-            "comissao": "3.000,00",
+            "admissao": dadosyaml["#{$tagscenario}"]["admissao"],
+            "cargo": dadosyaml["#{$tagscenario}"]["cargo"],
+            "comissao": dadosyaml["#{$tagscenario}"]["comissao"],
             "cpf": Faker::IDNumber.brazilian_citizen_number(formatted: true),
-            "departamentoId": 1,
-            "nome": Faker::Company.name,
-            "salario": "1.000,00",
-            "sexo": "f",
-            "tipoContratacao": "clt"
+            "departamentoId": dadosyaml["#{$tagscenario}"]["departamentoId"],
+            "nome": Faker::Name.name,
+            "salario": dadosyaml["#{$tagscenario}"]["salario"],
+            "sexo": dadosyaml["#{$tagscenario}"]["sexo"],
+            "tipoContratacao": dadosyaml["#{$tagscenario}"]["tipoContratacao"]
         }.to_json
     end
 
     def data_user_invalid(admissao, cargo, comissao, cpf, nome, salario, sexo, departamento, tipocontratacao)
         @body = {
-            admissao: admissao,
-            cargo: cargo,
-            comissao: comissao,
-            cpf: cpf,
-            departamentoId: departamento,
-            nome: nome,
-            salario: salario,
-            sexo: sexo,
-            tipoContratacao: tipocontratacao
+            "admissao": admissao,
+            "cargo": cargo,
+            "comissao": comissao,
+            "cpf": cpf,
+            "departamentoId": departamento,
+            "nome": nome,
+            "salario": salario,
+            "sexo": sexo,
+            "tipoContratacao": tipocontratacao
         }.to_json
     end
 
@@ -58,4 +59,3 @@ class UpdateUserApi
         @response
     end
 end
-  

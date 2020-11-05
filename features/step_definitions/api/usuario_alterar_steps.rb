@@ -1,7 +1,7 @@
 # encoding: utf-8
 # language:pt
   
-Dado('esteja informando os dados {string} {string} {string} {string} {string} {string} {string} {int} {string}') do |admissao, cargo, comissao, cpf, nome, salario, sexo, departamento, tipocontratacao|
+Dado('esteja informando os dados {string} {string} {string} {string} {string} {string} {string} {string} {string}') do |admissao, cargo, comissao, cpf, nome, salario, sexo, departamento, tipocontratacao|
     @update_user_api.data_user_invalid(admissao, cargo, comissao, cpf, nome, salario, sexo, departamento, tipocontratacao)  
 end
 
