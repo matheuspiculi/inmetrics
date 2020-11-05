@@ -1,0 +1,64 @@
+{
+    "type": "object",
+    "properties": {
+        "value": { "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "departamentoId": {
+                        "type": "number"
+                    },
+                    "nomeDepartamento": {
+                        "type": "string"
+                    },
+                    "local": {
+                        "type": "string"
+                    },
+                    "orcamento": {
+                        "type": "string"
+                    },
+                    "empregados": {
+                        "properties": {
+                            "value": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "empregadoId": {
+                                            "type": "string"
+                                        },
+                                        "nome": {
+                                            "type": "boolean"
+                                        },
+                                        "sexo": {
+                                            "type": "string"
+                                        },
+                                        "cpf": {
+                                            "type": "string"
+                                        },
+                                        "cargo": {
+                                            "type": "string"
+                                        },
+                                        "admissao": {
+                                            "type": "string"
+                                        },
+                                        "salario": {
+                                            "type": "string"
+                                        },
+                                        "comissao": {
+                                            "type": "string"
+                                        },
+                                        "tipoContratacao": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "additionalProperties": false
+}

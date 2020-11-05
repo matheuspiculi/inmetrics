@@ -1,0 +1,4 @@
+---
+app_host: "http://www.inmrobo.tk"
+default_max_wait_time: 60
+baseurl_api: "http://inm-api-test.herokuapp.com/"

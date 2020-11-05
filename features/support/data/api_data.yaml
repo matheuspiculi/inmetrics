@@ -1,0 +1,84 @@
+---
+last_id_user_api:
+    nome: Valentina
+    cpf: "803.483.786-53"
+    id: 2541
+
+api_cadastrar_usuario_sucesso:
+    username_api: "inmetrics"
+    password_api: "automacao"
+    admissao: "20/08/2020"
+    cargo: "desenvolvedor"
+    comissao: "150.00,00"
+    cpf: "021.346.190-08"
+    departamentoId: 1
+    nome: "joão"
+    salario: "150.00,00"
+    sexo: "m"
+    tipoContratacao: "pj"
+
+api_cadastrar_usuario_401:
+    username_api: "a"
+    password_api: "automacao"
+    admissao: "20/08/2020"
+    cargo: "desenvolvedor"
+    comissao: "150.00,00"
+    cpf: "021.346.190-08"
+    departamentoId: 1
+    nome: "joão"
+    salario: "150.00,00"
+    sexo: "m"
+    tipoContratacao: "pj"
+
+api_cadastrar_usuario_404:
+    username_api: "inmetrics"
+    password_api: "automacao"
+    admissao: "20/08/2020"
+    cargo: "desenvolvedor"
+    comissao: "150.00,00"
+    cpf: "021.346.190-08"
+    departamentoId: 1
+    nome: "joão"
+    salario: "150.00,00"
+    sexo: "m"
+    tipoContratacao: "pj"
+
+api_listar_usuario_todos:
+    username_api: "inmetrics"
+    password_api: "automacao"
+
+api_listar_usuario_todos_401:
+    username_api: "inmetrics"
+    password_api: "s"
+    
+api_listar_usuario_todos_404:
+    username_api: "inmetrics"
+    password_api: "automacao"
+
+api_listar_usuario_especifico:
+    username_api: "inmetrics"
+    password_api: "automacao"
+
+api_listar_usuario_especifico_inexistente:
+    username_api: "inmetrics"
+    password_api: "automacao"
+
+api_listar_usuario_especifico_401:
+    username_api: "inmetrics"
+    password_api: "s"
+
+api_listar_usuario_especifico_404:
+    username_api: "inmetrics"
+    password_api: "automacao"
+
+api_alterar_usuario_sucesso_401:
+    username_api: "inmetrics"
+    password_api: "s"
+
+api_alterar_usuario_sucesso_404:
+    username_api: "inmetrics"
+    password_api: "automacao"
+
+api_alterar_usuario_sucesso_405:
+    username_api: "inmetrics"
+    password_api: "automacao"

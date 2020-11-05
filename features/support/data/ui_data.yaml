@@ -1,0 +1,10 @@
+---
+user_login:
+  email: 'matheuspiculi'
+  password: '123456'
+username_invalid:
+  email: 'matheuspicu'
+  password: '123456'
+password_invalid:
+  email: 'matheuspiculi'
+  password: '888888'

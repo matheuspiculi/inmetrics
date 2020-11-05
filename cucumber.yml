@@ -1,0 +1,30 @@
+# Profiles
+default: -p chrome -p bdd -p html -p json
+api_log: -p http_log -p api
+
+
+# Reports
+<%time = Time.now.strftime('%d%m%Y_%H%M%S').to_s%>
+json_report: --format pretty --format message --out=report/rubocop.html.json
+html_report_api: --format pretty --format html --out=report/report_api_<%=time%>.html
+html_report: --format pretty --format html --out=report/report_<%=time%>.html
+
+# Logs
+http_log: HTTP_LOG=true
+
+# Browsers
+firefox: BROWSER=firefox
+chrome: BROWSER=chrome
+headless: BROWSER=chrome_headless
+internet_explorer: BROWSER=internet_explorer
+
+# Format Execution
+dot: --format progress
+bdd: --format pretty
+
+# Output
+html: --format html --out=log/report.html
+json: --format json --out=log/report.json
+
+# API Config
+api: ENVIRONMENT_TYPE_API=api_log
