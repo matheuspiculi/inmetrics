@@ -2,7 +2,7 @@
 # language:pt
 
 @desafio
-@cadastrar_usuario
+@ui_cadastrar_usuario
 
 Funcionalidade: Cadastrar Usuário
   Eu como usuário
@@ -23,22 +23,33 @@ Funcionalidade: Cadastrar Usuário
     Então deverá redirecionar para a página de cadastro
     E deverá retornar um modal de cadastro 
 
+  @verificar_link_login_pelo_modal
+  Cenário: Verificar redirecionamento do "login" pelo modal de cadastro
+    Dado que esteja no modal de login de cadastro
+    Quando clicar em cadastre-se no modal de login
+    E clicar em login no modal
+    Então deverá ser redirecionado para o login
+    E deverá retornar um modal de login
+
   @ui_cadastrar_usuario_sucesso
   Cenário: Cadastrar usuário com sucesso 
-    Dado que esteja no modal de login de cadastro
-    Quando preencher o cadastro 
+    Dado que esteja na página de login do site
+    Quando clicar em cadastre-se no modal de login
+    E preencher o cadastro 
     Então deverá ser redirecionado para o login
 
   @validar_campos_cadastro_vazios
   Cenário: Verificar cadastro com campos vazios
     Dado que esteja no modal de login de cadastro
-    Quando clicar em cadastrar deixando os campos vazios
+    Quando clicar em cadastre-se no modal de login
+    E clicar em cadastrar deixando os campos vazios
     Então deverão retornar alertas de campo obrigatório
 
   @validar_senhas_diferentes
   Cenário: Verificar cadastro com repetição de senha incorreta
     Dado que esteja no modal de login de cadastro
-    Quando preencher um nome 
+    Quando clicar em cadastre-se no modal de login
+    E preencher um nome
     E preencher a senha "123456"
     E confirmar a senha "654321"
     E realizar o cadastro
@@ -47,5 +58,6 @@ Funcionalidade: Cadastrar Usuário
   @cadastrar_usuario_invalido
   Cenário: Realizar cadastro com usuário já existente
     Dado que esteja no modal de login de cadastro
+    Quando clicar em cadastre-se no modal de login
     E preencher o nome "testeautomacao"
-    Então deverá retornar uma mensagem "Usuário já cadastrado"
+    Então deverá retornar uma mensagem "Usuário já cadastrad"

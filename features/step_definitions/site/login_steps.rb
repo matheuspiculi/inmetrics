@@ -44,6 +44,7 @@ end
 
 Quando('clicar em entre') do
     @login.click_enter
+    expect(page).to have_current_path("http://www.inmrobo.tk/empregados/")
 end
   
 Então('deverá redirecionar para a página de empregados') do

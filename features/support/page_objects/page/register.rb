@@ -3,27 +3,44 @@
 
 class RegisterPage < SitePrism::Page
   
-  element  :title_page, '.login100-form-title'
-  element  :username, 'input[name="username"]'
-  element  :password, 'input[name="pass"]'
-  element  :confirm_password, 'input[name="confirmpass"]'
-  element  :register_modal, '.wrap-login100'
-  element  :btn_register, '.login100-form-btn'
-  elements :alert_message, '.alert-validate'
-  element  :error_message, '.p-t-13 .m-t-17'
-  element  :invalid_name,  '.p-t-10 .m-t-17'
-  elements :error_message_user, '.p-b-1 span.txt1 .m-t-17'
+  element :title_page, '.login100-form-title'
+  element :username, 'input[name="username"]'
+  element :password, 'input[name="pass"]'
+  element :confirm_password, 'input[name="confirmpass"]'
+  element :errorUsername, 'form > div:nth-child(4)'
+  element :errorPassword, 'form > div:nth-child(6)'
+  element :errorConfirmPassword, 'form > div:nth-child(8)'
+  element :register_modal, '.wrap-login100'
+  element :btn_register, '.login100-form-btn'
+  element :btn_login, '.p-t-20'
+  element :alert_message, '.alert-validate'
+  element :error_message, '.p-t-13 .m-t-17'
+  element :invalid_name,  '.p-t-10 .m-t-17'
+  element :error_message_user, '.p-b-1 span.txt1 .m-t-17'
     
   def home
     visit "/accounts/signup/"
   end
 
   def fill_form_user
-    name = Faker::Name.name
-    username.set(name.gsub!(" ",""))
-    password.set("123456")
-    confirm_password.set("123456")
-    btn_register.click
+    fill_name
+    fill_password("123456")
+    fill_confirm_password("123456")
+    click_btn_register
+  end
+
+  def fill_name_register(name_register)
+    username.set(name_register)
+    fill_password("123456")
+    fill_confirm_password("123456")
+    click_btn_register
+  end
+
+  def fill_form_user_existent(name)
+    username.set(name)
+    fill_password("123456")
+    fill_confirm_password("123456")
+    click_btn_register
   end
 
   def fill_name
@@ -39,21 +56,40 @@ class RegisterPage < SitePrism::Page
     confirm_password.set(password02)
   end
 
-  def fill_name_register(name_register)
-    username.set(name_register)
-    password.set("123456")
-    confirm_password.set("123456")
-    btn_register.click
+  def getUsarnameValue
+    username.value
+  end
+
+  def getPasswordValue
+    password.value
+  end
+
+  def getConfirmPassawordValue
+    confirm_password.value
+  end
+
+  def getUsernameClass
+    errorUsername[:class]
+  end
+
+  def getPasswordClass
+    errorPassword[:class]
+  end
+
+  def getConfirmPasswordClass
+    errorConfirmPassword[:class]
+  end
+
+  def geterrorInvalidName
+    invalid_name.text
   end
 
   def click_btn_register
     btn_register.click
   end
 
-  def fill_form_user_existent(name)
-    username.set(name)
-    password.set("123456")
-    confirm_password.set("123456")
-    btn_register.click
+  def click_btn_login
+    btn_login.click
   end
+
 end

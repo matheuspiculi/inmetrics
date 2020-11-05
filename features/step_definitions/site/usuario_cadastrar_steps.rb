@@ -1,48 +1,51 @@
 # encoding: utf-8
 # language:pt
 
+Dado('que esteja no modal de login de cadastro') do
+    steps %{
+        Dado que esteja na página de login do site
+    }
+end
+
 Quando('clicar em cadastre-se no modal de login') do
     @login.click_register
-end
-  
-Então('deverá redirecionar para a página de cadastro') do
-    @register.home
-end
-  
-Então('deverá retornar um modal de cadastro') do
-    expect(@register.title_page.text).to eql("Cadastre-se")
 end
 
 Quando('clicar em cadastre-se no cabeçalho') do
     @login.click_link_register_header
 end
 
-Dado('que esteja no modal de login de cadastro') do
-    steps %{
-        Dado que esteja na página de login do site
-        Quando clicar em cadastre-se no modal de login
-        Então deverá redirecionar para a página de cadastro
-        E deverá retornar um modal de cadastro
-    }
+Então('deverá redirecionar para a página de cadastro') do
+    expect(page).to have_current_path("http://www.inmrobo.tk/accounts/signup/")
 end
   
+Então('deverá retornar um modal de cadastro') do
+    expect(@register.title_page.text).to eql("Cadastre-se")
+end
+
 Quando('preencher o cadastro') do
     @register.fill_form_user
 end
-  
+
+Quando('clicar em cadastrar deixando os campos vazios') do
+    expect(@register.getUsarnameValue).to eq ""
+    expect(@register.getPasswordValue).to eq ""
+    expect(@register.getConfirmPassawordValue).to eq ""
+    @register.click_btn_register
+end
+
 Então('deverá ser redirecionado para o login') do
-    @login.home
+    expect(page).to have_current_path("http://www.inmrobo.tk/accounts/login/")
+end
+
+Então('deverá retornar um modal de login') do
     expect(@login.title_page.text).to eql("Login")
 end
 
-Quando('clicar em cadastrar deixando os campos vazios') do
-    @register.click_btn_register
-end
-  
 Então('deverão retornar alertas de campo obrigatório') do
-    expect(@register.alert_message.first).to be_truthy
-    expect(@register.alert_message[1]).to be_truthy
-    expect(@register.alert_message.last).to be_truthy
+    expect(@register.getUsernameClass).to eq "wrap-input100 validate-input alert-validate" 
+    expect(@register.getPasswordClass).to eq "wrap-input100 validate-input alert-validate"
+    expect(@register.getConfirmPasswordClass).to eq "wrap-input100 validate-input alert-validate"
 end
 
 Quando('preencher um nome') do
@@ -60,6 +63,10 @@ end
 Quando('realizar o cadastro') do
     @register.click_btn_register
 end
+
+Quando('clicar em login no modal') do
+    @register.click_btn_login
+end
   
 Então('deverá retornar uma mensagem de erro {string}') do |message|
     expect(@register.error_message.text).to eql(message)
@@ -70,5 +77,5 @@ Dado('preencher o nome {string}') do |name_register|
 end
   
 Então('deverá retornar uma mensagem {string}') do |message|
-    expect(@register.error_message_user.first.text).to eql(message)
+    expect(@register.geterrorInvalidName).to eql(message)
 end

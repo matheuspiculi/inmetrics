@@ -2,7 +2,7 @@
 # language:pt
 
 @desafio
-@login
+@ui_login
 
 Funcionalidade: Login
   Eu como usuário do sistema
