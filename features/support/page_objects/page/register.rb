@@ -44,7 +44,7 @@ class RegisterPage < SitePrism::Page
   end
 
   def fill_name
-    name = Faker::Name.name
+    name = Faker::Name.name_with_middle
     username.set(name.gsub!(" ",""))
   end
 

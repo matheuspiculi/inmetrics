@@ -2,14 +2,14 @@
 # language:pt
 
 @desafio
-@funcionario
+@ui_editar_funcionario
 
 Funcionalidade: Editar cadastro do funcionário
   Eu como usuário do sistema
   Quero realizar edição cadastro do funcionário
   Para poder ter controle e manutenção do mesmo
 
-  @ui_editar_funcionario
+  @ui_editar_funcionario_sucesso
   Cenário: Realizar edição do usuário
     Dado que esteja na página de empregados
     Quando pesquisar pelo usuário cadastrado

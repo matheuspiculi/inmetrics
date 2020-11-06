@@ -38,14 +38,14 @@ Funcionalidade: Cadastrar Usuário
     E preencher o cadastro 
     Então deverá ser redirecionado para o login
 
-  @validar_campos_cadastro_vazios
+  @ui_cadastrar_usuario_campos_vazios
   Cenário: Verificar cadastro com campos vazios
     Dado que esteja no modal de login de cadastro
     Quando clicar em cadastre-se no modal de login
     E clicar em cadastrar deixando os campos vazios
     Então deverão retornar alertas de campo obrigatório
 
-  @validar_senhas_diferentes
+  @ui_cadastrar_usuario_senhas_diferentes
   Cenário: Verificar cadastro com repetição de senha incorreta
     Dado que esteja no modal de login de cadastro
     Quando clicar em cadastre-se no modal de login
@@ -55,7 +55,7 @@ Funcionalidade: Cadastrar Usuário
     E realizar o cadastro
     Então deverá retornar uma mensagem de erro "Senhas não combinam"
 
-  @cadastrar_usuario_invalido
+  @ui_cadastrar_usuario_invalido
   Cenário: Realizar cadastro com usuário já existente
     Dado que esteja no modal de login de cadastro
     Quando clicar em cadastre-se no modal de login

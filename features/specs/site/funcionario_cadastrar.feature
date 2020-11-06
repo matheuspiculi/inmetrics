@@ -2,14 +2,14 @@
 # language:pt
 
 @desafio
-@funcionario
+@ui_cadastrar_funcionario
 
 Funcionalidade: Cadastro de funcionário
   Eu como usuário do sistema
   Quero realizar cadastro do funcionário
   Para poder ter controle e manutenção do mesmo
 
-  @ui_cadastrar_funcionario
+  @ui_cadastrar_funcionario_sucesso
   Esquema do Cenário: Realizar cadastro de um funcionário com sucesso
     Dado que esteja na página de empregados
     Quando clicar em novo funcionário

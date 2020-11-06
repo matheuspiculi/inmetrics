@@ -10,7 +10,7 @@ class NewUserApi
             "comissao": dadosyaml["#{$tagscenario}"]["comissao"],
             "cpf": Faker::IDNumber.brazilian_citizen_number(formatted: true),
             "departamentoId": dadosyaml["#{$tagscenario}"]["departamentoId"],
-            "nome": Faker::Name.name,
+            "nome": Faker::Name.name_with_middle,
             "salario": dadosyaml["#{$tagscenario}"]["salario"],
             "sexo": dadosyaml["#{$tagscenario}"]["sexo"],
             "tipoContratacao": dadosyaml["#{$tagscenario}"]["tipoContratacao"]
