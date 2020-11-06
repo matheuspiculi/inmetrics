@@ -2,7 +2,7 @@
 # language:pt
 
 @desafio
-@api
+@api_listar_usuario
 
 Funcionalidade: Listar usuários
   Eu como usuário

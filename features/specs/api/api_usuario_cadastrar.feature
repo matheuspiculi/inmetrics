@@ -2,7 +2,7 @@
 # language:pt
 
 @desafio
-@api
+@api_cadastrar_usuario
 
 Funcionalidade: Cadastrar usuário
   Eu como usuário

@@ -60,4 +60,4 @@ Funcionalidade: Cadastrar Usuário
     Dado que esteja no modal de login de cadastro
     Quando clicar em cadastre-se no modal de login
     E preencher o nome "testeautomacao"
-    Então deverá retornar uma mensagem "Usuário já cadastrad"
+    Então deverá retornar uma mensagem "Usuário já cadastrado"

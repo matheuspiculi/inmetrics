@@ -2,7 +2,7 @@
 # language:pt
 
 @desafio
-@api
+@api_alterar_usuario
 
 Funcionalidade: Alterar Usuário
   Eu como usuário
