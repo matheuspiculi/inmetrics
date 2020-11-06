@@ -7,7 +7,7 @@ Quando('pesquisar pelo usuário cadastrado') do
 end
 
 Quando('clicar no ícone de exclusão do primeiro usuário encontrado') do
-    @employees.delete_user
+    @employees.click_delete_employee
 end
   
 Então('deverá retornar a mensagem de sucesso de exclusão {string}') do |message|

@@ -12,7 +12,7 @@ at_exit do
         config.report_tabs = %w[Overview Features Scenarios Errors]
         config.report_title = "InMetrics Report Web Automation Test Results"
         config.compress_images = false
-        config.additional_info = { "Project name" => "InMetrics", "Browser" => "#{ENV["BROWSER"]}", "Environment" => "Oficial", "Report generated" => time }
+        config.additional_info = { "Project name" => "InMetrics", "Browser" => "#{ENV["BROWSER"]}", "Environment" => "Desafio", "Report generated" => time }
     end
     ReportBuilder.build_report
 end

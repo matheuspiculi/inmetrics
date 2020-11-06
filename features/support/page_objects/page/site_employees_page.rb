@@ -2,24 +2,21 @@
 # language:pt
 
 class EmployeesPage < SitePrism::Page
-    element  :table_employees, '#tabela'
-    element  :filter_table, '#tabela_filter input'
-    element  :message_edit, '.alert.alert-success.alert-dismissible'
+
+    element :table_employees, '#tabela'
+    element :filter_table, '#tabela_filter input'
+    element :message_edit, '.alert.alert-success.alert-dismissible'
+    element :employee_head, 'a[href="/empregados/"]'
     elements :btn_delete, '#delete-btn'
     elements :btn_change, '.fa.fa-pencil'
     elements :value_table, '#tabela tr td'
-    element :employee_head, 'a[href="/empregados/"]'
-
+    
     def home
         visit "/empregados/"
     end
 
     def click_employee_head
         employee_head.click
-    end
-
-    def logout
-        click_link 'Sair'
     end
 
     def click_new_employees
@@ -30,12 +27,12 @@ class EmployeesPage < SitePrism::Page
         filter_table.set(name)
     end
 
-    def delete_user
+    def click_delete_employee
       btn_delete.first.click
     end
 
-    def click_edit_employees
+    def click_edit_employee
       btn_change.first.click
     end
+
 end
-  

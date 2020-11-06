@@ -7,7 +7,7 @@ Quando('pesquiso pelo usuário {string} para realizar a alteração') do |name|
 end
 
 E("clico no ícone de edição do primeiro usuário encontrado") do
-    @home.click_edit_employees    
+    @home.click_edit_employee    
 end
 
 Quando('pesquisar pelo usuário {string}') do |name|
@@ -16,7 +16,7 @@ Quando('pesquisar pelo usuário {string}') do |name|
 end
 
 Quando('clicar no ícone de edição do primeiro usuário encontrado') do
-  @employees.click_edit_employees
+  @employees.click_edit_employee
 end
 
 Quando('alterar as seguintes informações de cargo {string} e admissão {string}') do |office, admission|

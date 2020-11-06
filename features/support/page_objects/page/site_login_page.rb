@@ -18,6 +18,10 @@ class LoginPage < SitePrism::Page
     visit "/accounts/login/"
   end
 
+  def logout
+    click_link 'Sair'
+  end
+
   def click_link_register_header
     link_register_header.click
   end
