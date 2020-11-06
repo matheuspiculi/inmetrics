@@ -17,3 +17,17 @@ Before do |scenario|
     #tag scenario
     $tagscenario = getTagScenario(scenario.source_tag_names)
 end
+
+Before('@ui_excluir_funcionario') do
+    @new_user_api.data_new_user
+    @new_user_api.post_data("empregado/cadastrar")
+    @new_user_api.record_user_response
+    sleep 5
+end
+
+Before('@ui_editar_funcionario') do
+    @new_user_api.data_new_user
+    @new_user_api.post_data("empregado/cadastrar")
+    @new_user_api.record_user_response
+    sleep 5
+end

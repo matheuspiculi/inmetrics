@@ -30,7 +30,6 @@ Quando('preencher o usuário e a senha incorreta') do
 end
 
 Quando('preencher o nome com um usuário nao preenchido e senha correta') do
-
     @dataui = load_data_test("ui")
     @login.login_user(@dataui['username_blank'])
     expect(@login.getclassUsernameField).to eq "wrap-input100 validate-input"

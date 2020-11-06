@@ -18,11 +18,28 @@ Quando('preencher os dados {string}, {string}, {string}, {string}, {string}, {st
     employee = { nome: nome, cpf: cpf, cargo: cargo, salario: salario, admissao: admissao, sexo: sexo, tipo_contratacao: tipo_contratacao }
     @new_employees.fill_form_employee(employee)
 end
+
+Quando('preencher o cpf de forma inválida sendo {string}') do |invalidcpf|
+    @new_employees.fill_cpf_field(invalidcpf)
+end
+
+Quando('preencher o cargo de forma inválida sendo {string}') do |invalidoffice|
+    @new_employees.fill_invalidoffice(invalidoffice)
+end
   
 Quando('enviar as informações') do
     @new_employees.click_btn_form
 end
 
 Então('deverá retornar uma mensagem de sucesso {string}') do |message|
-    expect(@new_employees.message_success.text).to include(message)
+    expect(@new_employees.getTextMsgSucess).to include(message)
+end
+
+Então('deverá retornar uma mensagem de erro como alerta {string}') do |message|
+    expect(getTextAlertBox).to eq(message)
+    acceptAlertBox
+end
+
+Então('deverá retornar uma mensagem de erro {string}') do |message|
+    expect(@new_employees.getTextMsgError).to eq(message)
 end

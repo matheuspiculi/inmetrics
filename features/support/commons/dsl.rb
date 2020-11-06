@@ -21,5 +21,13 @@ module Common
         tag = variavelTemp[/(?<=\@)(.*?)$/]
         return tag
     end
+
+    def getTextAlertBox
+        page.driver.browser.switch_to.alert.text
+    end
+
+    def acceptAlertBox
+        page.driver.browser.switch_to.alert.accept
+    end
     
 end

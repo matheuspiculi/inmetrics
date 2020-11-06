@@ -10,5 +10,5 @@ class EditEmployeesPage < SitePrism::Page
         input_office.set(edit_office)
         input_admission.set(edit_admission)
     end
+    
 end
-  

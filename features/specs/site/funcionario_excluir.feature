@@ -9,9 +9,10 @@ Funcionalidade: Excluir cadastro do funcionário
   Quero realizar exclusão do cadastro do funcionário
   Para poder ter controle e manutenção do mesmo
 
-  @excluir_funcionario
+  @ui_excluir_funcionario
   Cenário: Realizar exclusão do usuário
     Dado que esteja na página de empregados
-    Quando pesquisar pelo usuário "Nathália"
+    Quando pesquisar pelo usuário cadastrado
     E clicar no ícone de exclusão do primeiro usuário encontrado
-    Então deverá retornar a mensagem de sucesso de exclusão "SUCESSO! Funcionário removido com sucesso"  
+    Então deverá retornar a mensagem de sucesso de exclusão "SUCESSO! Funcionário removido com sucesso"
+    E não ser mais exibido na pesquisa
