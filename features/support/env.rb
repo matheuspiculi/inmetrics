@@ -23,7 +23,7 @@ when "firefox"
   @driver = :selenium
 when "chrome"
   @driver = :selenium_chrome
-when "chrome_headless"
+when "headless"
   @driver = :selenium_chrome_headless
 when "internet_explorer"
   @driver = :internet_explorer
@@ -39,7 +39,7 @@ Capybara.register_driver :selenium do |app|
     Capybara::Selenium::Driver.new(app, browser: :firefox)
   elsif BROWSER.eql?("chrome")
     Capybara::Selenium::Driver.new(app, browser: :chrome)
-  else BROWSER.eql?("chrome_headless")
+  else BROWSER.eql?("headless")
        Capybara::Selenium::Driver.new(app, browser: :chrome,
                                            desired_capabilities: Selenium::WebDriver::Remote::Capabilities.chrome(
                                              "chromeOptions" => { "args" => ["--disable-setuid-sandbox",

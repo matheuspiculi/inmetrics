@@ -15,7 +15,7 @@ http_log: HTTP_LOG=true
 # Browsers
 firefox: BROWSER=firefox
 chrome: BROWSER=chrome
-headless: BROWSER=chrome_headless
+headless: BROWSER=headless
 internet_explorer: BROWSER=internet_explorer
 
 # Format Execution
