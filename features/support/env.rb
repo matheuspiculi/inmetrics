@@ -42,7 +42,7 @@ Capybara.register_driver :selenium do |app|
   else BROWSER.eql?("chrome_headless")
        Capybara::Selenium::Driver.new(app, browser: :chrome,
                                            desired_capabilities: Selenium::WebDriver::Remote::Capabilities.chrome(
-                                             chromeOptions: { args: %w[headless disable-dev-shm-usage no-sandbox enable-features=NetworkService,NetworkServiceInProcess] }
+                                             chromeOptions: { args: %w[headless disable-gpu no-sandbox disable-dev-shm-usage remote-debugging-port=9222] }
                                            ))
   end
 end
