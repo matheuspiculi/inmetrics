@@ -4,7 +4,7 @@
 @desafio
 @api_listar_usuario
 
-Funcionalidade: Listar usuários
+Funcionalidade: [ API ] Listar usuários
   Eu como usuário
   Quero consultar os usuários cadastrados
   Para poder validar o serviço de busca

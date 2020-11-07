@@ -4,7 +4,7 @@
 @desafio
 @ui_editar_funcionario
 
-Funcionalidade: Editar cadastro do funcionário
+Funcionalidade: [ UI ] Editar cadastro do funcionário
   Eu como usuário do sistema
   Quero realizar edição cadastro do funcionário
   Para poder ter controle e manutenção do mesmo

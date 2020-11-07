@@ -13,7 +13,8 @@ class LoginPage < SitePrism::Page
   element :link_register_header, 'li.nav-item a[href*="signup"]'
   element :link_login_header, 'li.nav-item a[href*="login"]'
   element :message_alert, '.alert-danger'
-  
+  element :btnSair, 'href="javascript:{document.getElementById("logout").submit()}"'
+
   def home
     visit "/accounts/login/"
   end
@@ -51,4 +52,8 @@ class LoginPage < SitePrism::Page
     passwordInvalid[:class]
   end
 
+  def findbtnSair
+    btnSair
+  end
+  
 end

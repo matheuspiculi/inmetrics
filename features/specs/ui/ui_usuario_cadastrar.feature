@@ -4,7 +4,7 @@
 @desafio
 @ui_cadastrar_usuario
 
-Funcionalidade: Cadastrar Usuário
+Funcionalidade: [ UI ] Cadastrar Usuário
   Eu como usuário
   Quero realizar um cadastro
   Para poder acessar o site
@@ -53,7 +53,7 @@ Funcionalidade: Cadastrar Usuário
     E preencher a senha "123456"
     E confirmar a senha "654321"
     E realizar o cadastro
-    Então deverá retornar uma mensagem de erro "Senhas não combinam"
+    Então deverá retornar uma mensagem de erro do usuario "Senhas não combinam"
 
   @ui_cadastrar_usuario_invalido
   Cenário: Realizar cadastro com usuário já existente

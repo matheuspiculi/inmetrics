@@ -4,7 +4,7 @@
 @desafio
 @api_alterar_usuario
 
-Funcionalidade: Alterar Usuário
+Funcionalidade: [ API ] Alterar Usuário
   Eu como usuário
   Quero alterar o usuário
   Para que eu possa validar o serviço

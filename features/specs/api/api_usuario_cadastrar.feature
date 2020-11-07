@@ -4,7 +4,7 @@
 @desafio
 @api_cadastrar_usuario
 
-Funcionalidade: Cadastrar usuário
+Funcionalidade: [ API ] Cadastrar usuário
   Eu como usuário
   Quero realizar o cadastro do usuário
   Para poder validar a funcionalidade do serviço

@@ -4,7 +4,7 @@
 @desafio
 @ui_cadastrar_funcionario
 
-Funcionalidade: Cadastro de funcionário
+Funcionalidade: [ UI ] Cadastro de funcionário
   Eu como usuário do sistema
   Quero realizar cadastro do funcionário
   Para poder ter controle e manutenção do mesmo
@@ -13,7 +13,7 @@ Funcionalidade: Cadastro de funcionário
   Esquema do Cenário: Realizar cadastro de um funcionário com sucesso
     Dado que esteja na página de empregados
     Quando clicar em novo funcionário
-    E preencher os dados <nome>, <cpf>, <cargo>, <salario>, <admissao>, <sexo>, <tipo_contratacao>
+    E preencher os dados "<nome>", "<cpf>", "<cargo>", "<salario>", "<admissao>", "<sexo>", "<tipo_contratacao>"
     E enviar as informações
     Então deverá retornar uma mensagem de sucesso "SUCESSO! Usuário cadastrado com sucesso"
 

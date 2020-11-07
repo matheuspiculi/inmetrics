@@ -4,7 +4,7 @@
 @desafio
 @ui_login
 
-Funcionalidade: Login
+Funcionalidade: [ UI ] Login
   Eu como usuário do sistema
   Quero realizar login
   Para poder acessar as funcionalidades disponiveis

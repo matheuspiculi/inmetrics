@@ -43,6 +43,7 @@ end
 
 Quando('clicar em entre') do
     @login.click_enter
+    findbtnSair
     expect(page).to have_current_path("http://www.inmrobo.tk/empregados/")
 end
   

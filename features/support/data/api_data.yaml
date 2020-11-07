@@ -103,3 +103,12 @@ ui_editar_funcionario_sucesso:
   salario: 150.000,00
   sexo: m
   tipoContratacao: pj
+api_alterar_usuario_401:
+  username_api: inmetrics
+  password_api: s
+api_alterar_usuario_404:
+  username_api: inmetrics
+  password_api: automacao
+api_alterar_usuario_405:
+  username_api: inmetrics
+  password_api: automacao

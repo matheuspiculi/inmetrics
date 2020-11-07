@@ -4,7 +4,7 @@
 @desafio
 @ui_excluir_funcionario
 
-Funcionalidade: Excluir cadastro do funcionário
+Funcionalidade: [ UI ] Excluir cadastro do funcionário
   Eu como usuário do sistema
   Quero realizar exclusão do cadastro do funcionário
   Para poder ter controle e manutenção do mesmo
