@@ -13,7 +13,7 @@ Funcionalidade: Cadastrar usuário
   Cenário: Cadastrar usuário com sucesso
     Dado que possuo um usuário para cadastro
     Quando enviar a solicitação post para o endereço "empregado/cadastrar"
-    Então o retorno do serviço deverá ser 202
+    Então o retorno do serviço deverá ser 201
     E o schema do json ser igual ao template "api_cadastrar_usuario_sucesso"
     E também deverá salvar o id, nome, cpf do usuário para realizar consultas futuras
 
