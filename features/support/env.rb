@@ -42,7 +42,7 @@ Capybara.register_driver :selenium do |app|
   else BROWSER.eql?("headless")
        Capybara::Selenium::Driver.new(app, browser: :chrome,
                                            desired_capabilities: Selenium::WebDriver::Remote::Capabilities.chrome(
-                                             chromeOptions: { args: ['--no-sandbox','--disable-dev-shm-usage','--disable-setuid-sandbox','--disable-seccomp-filter-sandbox','--headless','--disable-gpu','blink-settings=imagesEnabled=false']}
+                                             chromeOptions: { args: ['--disable-gpu','--disable-setuid-sandbox','--disable-extensions','--disable-dev-shm-usage','--disable-seccomp-filter-sandbox','--headless',,'blink-settings=imagesEnabled=false']}
                                            ))
   end
 end
