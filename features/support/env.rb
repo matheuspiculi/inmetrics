@@ -45,9 +45,7 @@ Capybara.register_driver :selenium do |app|
                                              "chromeOptions" => { "args" => ["--no-sandbox",
                                                                              "--headless",
                                                                              "--disable-gpu",
-                                                                             "--disable-dev-shm-usage",
-                                                                             "--disable-extensions",
-                                                                             "disable-infobars"]}
+                                                                             "--disable-dev-shm-usage"]}
                                            ))
   end
 end
