@@ -1,6 +1,4 @@
 Before do |scenario|
-    Capybara.page.current_window.resize_to(1360, 1000)
-
     #pages_ui
     @login = LoginPage.new
     @register = RegisterPage.new

@@ -18,39 +18,36 @@ include Common
 
 World(Common)
 
-case ENV["BROWSER"]
-when "firefox"
-  @driver = :selenium
-when "chrome"
-  @driver = :selenium_chrome
-when "headless"
-  @driver = :selenium_chrome_headless
-when "internet_explorer"
-  @driver = :internet_explorer
-else
-  puts "Invalid Browser"
-end
-
 BROWSER = ENV["BROWSER"]
 CONFIG = load_config_env
 
 Capybara.register_driver :selenium do |app|
+
   if BROWSER.eql?("firefox")
-    Capybara::Selenium::Driver.new(app, browser: :firefox)
+    puts "entro firefox"
+    Capybara::Selenium::Driver.new(app, :browser => :firefox, :marionette => true)
   elsif BROWSER.eql?("chrome")
-    Capybara::Selenium::Driver.new(app, browser: :chrome)
-  else BROWSER.eql?("headless")
-       Capybara::Selenium::Driver.new(app, browser: :chrome,
-                                           desired_capabilities: Selenium::WebDriver::Remote::Capabilities.chrome(
-                                             chromeOptions: { args: ['--headless','--no-sandbox','--disable-gpu','--disable-dev-shm-usage']}
-                                           ))
+    puts "entro chrome"
+    Capybara::Selenium::Driver.new(app, :browser => :chrome)
+  elsif BROWSER.eql?("internet_explorer")
+    puts "entro internet_explorer"
+    Capybara::Selenium::Driver.new(app, :browser => :internet_explorer)
+  elsif BROWSER.eql?("chrome_headless")
+    puts "entro headless"
+    Capybara::Selenium::Driver.new(app, :browser => :chrome, desired_capabilities: Selenium::WebDriver::Remote::Capabilities.chrome(
+      'goog:chromeOptions' => {'args' => ['headless', 'no-sandbox', 'disable-gpu', 'disable-dev-shm-usage'] }
+      )
+      )
   end
+  
 end
 
-
 Capybara.configure do |config|
-  config.default_driver = @driver
+  config.default_driver = :selenium
   config.app_host = CONFIG["app_host"]
   config.default_max_wait_time = CONFIG["default_max_wait_time"]
   $baseurl_api = CONFIG["baseurl_api"]
 end
+
+navegador = Capybara.current_session.driver.browser
+navegador.manage.window.resize_to(1280, 780)

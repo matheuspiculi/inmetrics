@@ -1,5 +1,5 @@
 # Profiles
-default: -p headless -p bdd -p html -p json --publish-quiet
+default: -p chrome -p bdd -p html -p json --publish-quiet
 api_log: -p http_log -p api
 
 
@@ -14,8 +14,9 @@ http_log: HTTP_LOG=true
 
 # Browsers
 firefox: BROWSER=firefox
+firefox_headless: BROWSER=firefox_headless
 chrome: BROWSER=chrome
-headless: BROWSER=headless
+chrome_headless: BROWSER=chrome_headless
 internet_explorer: BROWSER=internet_explorer
 
 # Format Execution
