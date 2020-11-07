@@ -43,12 +43,12 @@ end
 
 Quando('clicar em entre') do
     @login.click_enter
-    @login.findbtnSair
-    expect(page).to have_current_path("http://www.inmrobo.tk/empregados/")
 end
   
 Então('deverá redirecionar para a página de empregados') do
     expect(@employees.table_employees).to be_truthy
+    @login.findbtnSair
+    expect(page).to have_current_path("http://www.inmrobo.tk/empregados/")
 end
 
 Então('deverá retornar a mensagem {string}') do |message|

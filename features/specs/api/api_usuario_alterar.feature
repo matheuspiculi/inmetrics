@@ -45,16 +45,16 @@ Funcionalidade: [ API ] Alterar Usuário
     Dado as credenciais invalidas
     E que esteja consultando um usuário para altera-lo
     Quando realizo a consulta "/empregado/alterar"
-    Então o retorno do serviço deverá ser "401"
+    Então o retorno do serviço deverá ser 401
 
   @api_alterar_usuario_404
   Cenário: Erro 404
     Dado que esteja consultando um usuário para altera-lo
     Quando realizo a consulta "empregado/alterarr"
-    Então o retorno do serviço deverá ser "404"
+    Então o retorno do serviço deverá ser 404
 
   @api_alterar_usuario_405
   Cenário: Erro 405
     Dado que esteja consultando um usuário para altera-lo
     Quando realizo a consulta "empregado/alterar/s"
-    Então o retorno do serviço deverá ser "405"
+    Então o retorno do serviço deverá ser 405

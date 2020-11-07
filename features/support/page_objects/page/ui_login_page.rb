@@ -53,7 +53,7 @@ class LoginPage < SitePrism::Page
   end
 
   def findbtnSair
-    btnSair
+    wait_until { btnSair.visible? }
   end
   
 end
