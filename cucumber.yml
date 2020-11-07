@@ -1,5 +1,5 @@
 # Profiles
-default: -p firefox -p bdd -p html -p json --publish-quiet
+default: -p headless -p bdd -p html -p json --publish-quiet
 api_log: -p http_log -p api
 
 
