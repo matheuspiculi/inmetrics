@@ -11,6 +11,7 @@ require "report_builder"
 require "rubocop"
 require "base64"
 require "json-schema"
+require "rspec"
 require_relative "commons/dsl.rb"
 
 include Common
@@ -30,14 +31,15 @@ else
   puts "Invalid Browser"
 end
 
+BROWSER = ENV["BROWSER"]
 CONFIG = load_config_env
 
 Capybara.register_driver :selenium do |app|
-  if ENV["BROWSER"].eql?("firefox")
+  if BROWSER.eql?("firefox")
     Capybara::Selenium::Driver.new(app, browser: :firefox)
-  elsif ENV["BROWSER"].eql?("chrome")
+  elsif BROWSER.eql?("chrome")
     Capybara::Selenium::Driver.new(app, browser: :chrome)
-  else ENV["BROWSER"].eql?("chrome_headless")
+  else BROWSER.eql?("chrome_headless")
        Capybara::Selenium::Driver.new(app, browser: :chrome,
                                            desired_capabilities: Selenium::WebDriver::Remote::Capabilities.chrome(
                                              "chromeOptions" => { "args" => ["--headless",
@@ -45,7 +47,7 @@ Capybara.register_driver :selenium do |app|
                                                                              "--disable-dev-shm-usage",
                                                                              "--disable-extensions",
                                                                              "disable-infobars",
-                                                                             "--no-sandbox"] }
+                                                                             "--no-sandbox"]}
                                            ))
   end
 end
