@@ -24,16 +24,12 @@ CONFIG = load_config_env
 Capybara.register_driver :selenium do |app|
 
   if BROWSER.eql?("firefox")
-    puts "entro firefox"
     Capybara::Selenium::Driver.new(app, :browser => :firefox, :marionette => true)
   elsif BROWSER.eql?("chrome")
-    puts "entro chrome"
     Capybara::Selenium::Driver.new(app, :browser => :chrome)
   elsif BROWSER.eql?("internet_explorer")
-    puts "entro internet_explorer"
     Capybara::Selenium::Driver.new(app, :browser => :internet_explorer)
   elsif BROWSER.eql?("chrome_headless")
-    puts "entro headless"
     Capybara::Selenium::Driver.new(app, :browser => :chrome, desired_capabilities: Selenium::WebDriver::Remote::Capabilities.chrome(
       'goog:chromeOptions' => {'args' => ['headless', 'no-sandbox', 'disable-gpu', 'disable-dev-shm-usage'] }
       )
