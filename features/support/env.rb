@@ -32,6 +32,23 @@ end
 
 CONFIG = load_config_env
 
+Capybara.register_driver :selenium do |app|
+  if ENV["BROWSER"].eql?('firefox')
+    Capybara::Selenium::Driver.new(app, browser: :firefox)
+  elsif ENV["BROWSER"].eql?('chrome')
+    Capybara::Selenium::Driver.new(app, browser: :chrome)
+  else ENV["BROWSER"].eql?('chrome_headless')
+       Capybara::Selenium::Driver.new(app, browser: :chrome,
+                                           desired_capabilities: Selenium::WebDriver::Remote::Capabilities.chrome(
+                                             'chromeOptions' => { 'args' => ['--headless',
+                                                                             'disable-gpu',
+                                                                             '--disable-dev-shm-usage',
+                                                                             '--no-sandbox'] }
+                                           ))
+  end
+end
+
+
 Capybara.configure do |config|
   config.default_driver = @driver
   config.app_host = CONFIG["app_host"]
