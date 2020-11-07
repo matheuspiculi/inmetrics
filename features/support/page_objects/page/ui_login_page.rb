@@ -13,7 +13,7 @@ class LoginPage < SitePrism::Page
   element :link_register_header, 'li.nav-item a[href*="signup"]'
   element :link_login_header, 'li.nav-item a[href*="login"]'
   element :message_alert, '.alert-danger'
-  element :btnSair, 'href="javascript:{document.getElementById("logout").submit()}"'
+  element :btnSair, 'a[href*="logout"]'
 
   def home
     visit "/accounts/login/"
