@@ -1,5 +1,5 @@
 # Profiles
-default: -p headless -p bdd -p html -p json
+default: -p headless -p bdd -p html -p json --publish-quiet
 api_log: -p http_log -p api
 
 

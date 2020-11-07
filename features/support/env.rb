@@ -42,7 +42,7 @@ Capybara.register_driver :selenium do |app|
   else BROWSER.eql?("chrome_headless")
        Capybara::Selenium::Driver.new(app, browser: :chrome,
                                            desired_capabilities: Selenium::WebDriver::Remote::Capabilities.chrome(
-                                             chromeOptions { args: %w[headless disable-gpu disable-dev-shm-usage disable-extensions disable-infobars no-sandbox] }
+                                             chromeOptions: { args: %w[headless disable-gpu disable-dev-shm-usage disable-extensions disable-infobars no-sandbox] }
                                            ))
   end
 end
