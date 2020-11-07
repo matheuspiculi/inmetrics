@@ -42,9 +42,12 @@ Capybara.register_driver :selenium do |app|
                                            desired_capabilities: Selenium::WebDriver::Remote::Capabilities.chrome(
                                              'chromeOptions' => { 'args' => ['--headless',
                                                                              '--disable-gpu',
-                                                                             '--disable-dev-shm-usage',
+                                                                             '--disable-dev-shm-using',
                                                                              '--disable-extensions',
-                                                                             'disable-infobars'] }
+                                                                             'disable-infobars',
+                                                                             '--disable-setuid-sandbox',
+                                                                             '--no-sandbox',
+                                                                             '--remote-debugging-port=9222'] }
                                            ))
   end
 end
