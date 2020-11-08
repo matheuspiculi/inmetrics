@@ -14,33 +14,33 @@ Before do |scenario|
   @delete_user_api = DeleteUserApi.new
 
   # tag_scenario
-  $tagscenario = @common.tag_scenario(scenario.source_tag_names)
+  $tagscenario = tag_scenario(scenario.source_tag_names)
 end
 
 Before('@ui_excluir_funcionario_sucesso') do
-  @common.default_new_employee
+  default_new_employee
 end
 
 Before('@ui_editar_funcionario_parcial_sucesso_painel') do
-  @common.default_new_employee
+  default_new_employee
 end
 
 Before('@ui_editar_funcionario_parcial_sucesso_individual') do
-  @common.default_new_employee
+  default_new_employee
 end
 
 Before('@api_alterar_usuario_401') do
-  @common.default_new_employee
+  default_new_employee
 end
 
 Before('@api_alterar_usuario_404') do
-  @common.default_new_employee
+  default_new_employee
 end
 
 Before('@api_alterar_usuario_405') do
-  @common.default_new_employee
+  default_new_employee
 end
 
 Before('@api_alterar_usuario_informacoes_invalidas') do
-  @common.default_new_employee
+  default_new_employee
 end

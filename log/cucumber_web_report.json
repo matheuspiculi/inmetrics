@@ -1,10 +1,10 @@
 [
   {
-    "id": "[-api-]-listar-usuários",
-    "uri": "features/specs/api/api_usuario_listar.feature",
+    "id": "[-api-]-alterar-usuário",
+    "uri": "features/specs/api/api_usuario_alterar.feature",
     "keyword": "Funcionalidade",
-    "name": "[ API ] Listar usuários",
-    "description": "  Eu como usuário\n  Quero consultar os usuários cadastrados\n  Para poder validar o serviço de busca",
+    "name": "[ API ] Alterar Usuário",
+    "description": "  Eu como usuário\n  Quero alterar o usuário\n  Para que eu possa validar o serviço",
     "line": 6,
     "tags": [
       {
@@ -12,17 +12,17 @@
         "line": 3
       },
       {
-        "name": "@api_listar_usuario",
+        "name": "@api_alterar_usuario",
         "line": 4
       }
     ],
     "elements": [
       {
-        "id": "[-api-]-listar-usuários;listar-todos-os-empregados",
+        "id": "[-api-]-alterar-usuário;erro-401---unauthorized",
         "keyword": "Cenário",
-        "name": "Listar todos os empregados",
+        "name": "Erro 401 - Unauthorized",
         "description": "",
-        "line": 18,
+        "line": 43,
         "type": "scenario",
         "tags": [
           {
@@ -30,12 +30,12 @@
             "line": 3
           },
           {
-            "name": "@api_listar_usuario",
+            "name": "@api_alterar_usuario",
             "line": 4
           },
           {
-            "name": "@api_listar_usuario_todos_401",
-            "line": 17
+            "name": "@api_alterar_usuario_401",
+            "line": 42
           }
         ],
         "before": [
@@ -45,10 +45,10 @@
             },
             "result": {
               "status": "passed",
-              "duration": 25700
+              "duration": 36000
             },
             "status": "passed",
-            "duration": 25700
+            "duration": 36000
           },
           {
             "match": {
@@ -56,10 +56,10 @@
             },
             "result": {
               "status": "passed",
-              "duration": 25900
+              "duration": 44200
             },
             "status": "passed",
-            "duration": 25900
+            "duration": 44200
           },
           {
             "match": {
@@ -67,10 +67,10 @@
             },
             "result": {
               "status": "passed",
-              "duration": 16500
+              "duration": 17700
             },
             "status": "passed",
-            "duration": 16500
+            "duration": 17700
           },
           {
             "match": {
@@ -78,54 +78,79 @@
             },
             "result": {
               "status": "passed",
-              "duration": 29900
+              "duration": 61900
             },
             "status": "passed",
-            "duration": 29900
+            "duration": 61900
+          },
+          {
+            "match": {
+              "location": "features/support/hooks/before_hooks.rb:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9076899400
+            },
+            "status": "passed",
+            "duration": 9076899400
           }
         ],
         "steps": [
           {
             "keyword": "Dado ",
             "name": "as credenciais invalidas",
-            "line": 19,
+            "line": 44,
             "match": {
               "location": "features/step_definitions/api/api_usuario_listar_steps.rb:43"
             },
             "result": {
               "status": "passed",
-              "duration": 34100
+              "duration": 43700
             },
             "status": "passed",
-            "duration": 34100
+            "duration": 43700
+          },
+          {
+            "keyword": "E ",
+            "name": "que esteja consultando um usuário para altera-lo",
+            "line": 45,
+            "match": {
+              "location": "features/step_definitions/api/api_usuario_alterar_steps.rb:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11864700
+            },
+            "status": "passed",
+            "duration": 11864700
           },
           {
             "keyword": "Quando ",
-            "name": "realizo a consulta &quot;empregado/list_all&quot;",
-            "line": 20,
+            "name": "realizo a consulta &quot;/empregado/alterar&quot;",
+            "line": 46,
             "match": {
               "location": "features/step_definitions/api/api_usuario_listar_steps.rb:19"
             },
             "result": {
               "status": "passed",
-              "duration": 526817700
+              "duration": 348030600
             },
             "status": "passed",
-            "duration": 526817700
+            "duration": 348030600
           },
           {
             "keyword": "Então ",
-            "name": "o response do serviço da consulta deverá ser 401",
-            "line": 21,
+            "name": "o retorno do serviço deverá ser 401",
+            "line": 47,
             "match": {
-              "location": "features/step_definitions/api/api_usuario_listar_steps.rb:7"
+              "location": "features/step_definitions/api/api_usuario_cadastrar_steps.rb:10"
             },
             "result": {
               "status": "passed",
-              "duration": 3321500
+              "duration": 3685500
             },
             "status": "passed",
-            "duration": 3321500
+            "duration": 3685500
           }
         ],
         "after": [
@@ -141,10 +166,10 @@
             },
             "result": {
               "status": "passed",
-              "duration": 264723100
+              "duration": 320436700
             },
             "status": "passed",
-            "duration": 264723100
+            "duration": 320436700
           },
           {
             "match": {
@@ -152,10 +177,10 @@
             },
             "result": {
               "status": "passed",
-              "duration": 20600
+              "duration": 39200
             },
             "status": "passed",
-            "duration": 20600
+            "duration": 39200
           },
           {
             "match": {
@@ -163,17 +188,17 @@
             },
             "result": {
               "status": "passed",
-              "duration": 17000
+              "duration": 18200
             },
             "status": "passed",
-            "duration": 17000
+            "duration": 18200
           }
         ],
         "status": "passed",
-        "duration": 795032000
+        "duration": 9761177800
       }
     ],
     "status": "working",
-    "duration": 795032000
+    "duration": 9761177800
   }
 ]

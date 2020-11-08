@@ -62,16 +62,23 @@
         
             <div class="chip"><i class="material-icons rotate-45">label</i>@desafio</div>
         
-            <div class="chip"><i class="material-icons rotate-45">label</i>@api_listar_usuario</div>
+            <div class="chip"><i class="material-icons rotate-45">label</i>@api_alterar_usuario</div>
         
-            <div class="chip"><i class="material-icons rotate-45">label</i>@api_listar_usuario_todos_401</div>
+            <div class="chip"><i class="material-icons rotate-45">label</i>@api_alterar_usuario_401</div>
         
     
 
-    <h5>Listar todos os empregados (0.795s)</h5>
-    features/specs/api/api_usuario_listar.feature:18
+    <h5>Erro 401 - Unauthorized (9.761s)</h5>
+    features/specs/api/api_usuario_alterar.feature:43
 
     
+        
+            
+
+
+
+
+
         
             
 
@@ -130,7 +137,7 @@
           <li class="collection-item step passed">
   
 
-  <b>Quando </b> realizo a consulta &quot;empregado/list_all&quot; (0.527s)
+  <b>E </b> que esteja consultando um usuário para altera-lo (0.012s)
 
   
 
@@ -152,7 +159,29 @@
           <li class="collection-item step passed">
   
 
-  <b>Então </b> o response do serviço da consulta deverá ser 401 (0.003s)
+  <b>Quando </b> realizo a consulta &quot;/empregado/alterar&quot; (0.348s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>Então </b> o retorno do serviço deverá ser 401 (0.004s)
 
   
 
@@ -184,7 +213,7 @@
         <br>
         
             
-                <img class="materialboxed" data-caption='Listar todos os empregados' width="250" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABUYAAAJ8CAYAAAAyB3skAAAAAXNSR0IArs4c
+                <img class="materialboxed" data-caption='Erro 401 - Unauthorized' width="250" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABUYAAAJ8CAYAAAAyB3skAAAAAXNSR0IArs4c
 6QAAEr9JREFUeJzt2DEBACAMwDDAv+fhAo4mCnp3z8wsAAAAAICQ8zsAAAAA
 AOA1YxQAAAAAyDFGAQAAAIAcYxQAAAAAyDFGAQAAAIAcYxQAAAAAyDFGAQAA
 AIAcYxQAAAAAyDFGAQAAAIAcYxQAAAAAyDFGAQAAAIAcYxQAAAAAyDFGAQAA
@@ -358,7 +387,7 @@ AElFTkSuQmCC
   <div class="col m4 s12">
     <table id="metaData" class="bordered">
       <tbody>
-      <tr><th>Total Time</th><td>0.795s</td></tr>
+      <tr><th>Total Time</th><td>9.761s</td></tr>
       
           <tr>
             <th>Project name</th>
@@ -377,7 +406,7 @@ AElFTkSuQmCC
       
           <tr>
             <th>Report generated</th>
-            <td>2020-11-08 17:34:35 -0300</td>
+            <td>2020-11-08 17:47:01 -0300</td>
           </tr>
       
       </tbody>
@@ -394,14 +423,14 @@ AElFTkSuQmCC
       <li class="feature working">
   <div class="collapsible-header yellow lighten-1 waves-effect waves-light">
     <i class="material-icons">featured_play_list</i>
-    <b>Funcionalidade</b>&nbsp;[ API ] Listar usuários&nbsp;(0.795s)
+    <b>Funcionalidade</b>&nbsp;[ API ] Alterar Usuário&nbsp;(9.761s)
   </div>
 
   <div class="collapsible-body yellow lighten-4">
     <div class="collection scenarioList yellow">
       
         <a class="collection-item scenario modal-trigger waves-effect waves-light white-text passed" href="#g0f0s0">
-          <b>Cenário</b> Listar todos os empregados&nbsp;(0.795s)
+          <b>Cenário</b> Erro 401 - Unauthorized&nbsp;(9.761s)
         </a>
       
     </div>
@@ -434,11 +463,11 @@ AElFTkSuQmCC
           
           <tr class="passed">
             <td class="hide-on-small-only">
-  [ API ] Listar usuários
+  [ API ] Alterar Usuário
 </td>
 
 <td class="hoverable modal-trigger white-text" data-target="g0f0s0">
-  Listar todos os empregados
+  Erro 401 - Unauthorized
 </td>
 
 <td class="hide">
@@ -446,9 +475,9 @@ AElFTkSuQmCC
       
           @desafio. 
       
-          @api_listar_usuario. 
+          @api_alterar_usuario. 
       
-          @api_listar_usuario_todos_401. 
+          @api_alterar_usuario_401. 
       
   
 </td>
