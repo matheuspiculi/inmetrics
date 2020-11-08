@@ -19,10 +19,18 @@ Quando('alterar as seguintes informações de cargo {string} e admissão {string
   @edit_employees.edit_fill_form_employes(@edit_office, @edit_admission)
 end
 
-Então('as alterações deverão ter sido modificadas') do
+Então('as alterações deverão ter sido modificadas via painel') do
   steps %{
     Quando pesquisar pelo usuário cadastrado
   }
   expect(@employees.value_table[3].text).to eql(@edit_office)
   expect(@employees.value_table[4].text).to eql(@edit_admission)
+end
+
+Então('as alterações deverão ter sido modificadas via editar') do
+  steps %{
+    E clico no ícone de edição do primeiro usuário encontrado
+  }
+  expect(@edit_employees.get_text_cargo).to eql(@edit_office)
+  expect(@edit_employees.get_text_admissao).to eql(@edit_admission)
 end

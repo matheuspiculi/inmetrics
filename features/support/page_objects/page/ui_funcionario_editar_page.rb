@@ -8,4 +8,12 @@ class EditEmployeesPage < SitePrism::Page
     input_office.set(edit_office)
     input_admission.set(edit_admission)
   end
+
+  def get_text_cargo
+    input_office.value
+  end
+
+  def get_text_admissao
+    input_office.value
+  end
 end
