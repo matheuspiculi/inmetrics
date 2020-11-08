@@ -117,7 +117,17 @@ ui_excluir_funcionario_sucesso:
   salario: 150.000,00
   sexo: m
   tipoContratacao: pj
-ui_editar_funcionario_sucesso:
+ui_editar_funcionario_parcial_sucesso_painel:
+  username_api: inmetrics
+  password_api: automacao
+  admissao: 20/08/2020
+  cargo: desenvolvedor
+  comissao: 150.000,00
+  departamentoId: 1
+  salario: 150.000,00
+  sexo: m
+  tipoContratacao: pj
+ui_editar_funcionario_parcial_sucesso_individual:
   username_api: inmetrics
   password_api: automacao
   admissao: 20/08/2020
