@@ -65,4 +65,4 @@
 
 # Jenkins
 
-> O Jenkins atualmente está configurado para executar todo o projeto 2x ao dia ás 09:00 e as 18:00 de segunda-feira e sexta-feira
+> O Jenkins atualmente está configurado para executar todo o projeto 2x ao dia sendo 09:00 e as 18:00 de segunda-feira e sexta-feira
