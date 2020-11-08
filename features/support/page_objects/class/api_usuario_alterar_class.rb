@@ -14,7 +14,7 @@ class UpdateUserApi
       "comissao": dadosyaml[$tagscenario.to_s]['comissao'],
       "cpf": Faker::IDNumber.brazilian_citizen_number(formatted: true),
       "departamentoId": dadosyaml[$tagscenario.to_s]['departamentoId'],
-      "nome": Faker::Name.name_with_middle,
+      "nome": Faker::Name.name,
       "salario": dadosyaml[$tagscenario.to_s]['salario'],
       "sexo": dadosyaml[$tagscenario.to_s]['sexo'],
       "tipoContratacao": dadosyaml[$tagscenario.to_s]['tipoContratacao']

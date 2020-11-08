@@ -23,7 +23,7 @@ class NewEmployeesPage < SitePrism::Page
   end
 
   def fill_invalidoffice(invalidoffice)
-    fill_name_field(Faker::Name.name_with_middle)
+    fill_name_field(Faker::Name.name)
     fill_office_field(invalidoffice)
     fill_cpf_field('440.356.978-18')
     fill_money_field('5.000,00')

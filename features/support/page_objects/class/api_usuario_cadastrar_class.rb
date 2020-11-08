@@ -9,7 +9,7 @@ class NewUserApi
       "comissao": dadosyaml[$tagscenario.to_s]['comissao'],
       "cpf": Faker::IDNumber.brazilian_citizen_number(formatted: true),
       "departamentoId": dadosyaml[$tagscenario.to_s]['departamentoId'],
-      "nome": Faker::Name.name_with_middle,
+      "nome": Faker::Name.name,
       "salario": dadosyaml[$tagscenario.to_s]['salario'],
       "sexo": dadosyaml[$tagscenario.to_s]['sexo'],
       "tipoContratacao": dadosyaml[$tagscenario.to_s]['tipoContratacao']
@@ -54,7 +54,6 @@ class NewUserApi
   end
 
   def record_user_response
-    puts @response
     record_user_response = YAML.load_file(File.join(Dir.pwd, "/features/support/data/api_data.yaml"))
     record_user_response['last_id_user_api']['nome'] = @response['nome']
     record_user_response['last_id_user_api']['cpf'] = @response['cpf']
