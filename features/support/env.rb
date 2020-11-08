@@ -11,7 +11,7 @@ require 'report_builder'
 require 'rubocop'
 require 'base64'
 require 'json-schema'
-require_relative "commons/dsl"
+require_relative 'commons/dsl'
 include CommonTools
 
 World(CommonTools)

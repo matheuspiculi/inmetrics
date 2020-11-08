@@ -51,28 +51,4 @@ class EmployeesPage < SitePrism::Page
     page.all('#tabela > thead > tr > th')
   end
 
-  def text_name
-
-  end
-
-  def text_cpf
-
-  end
-
-  def text_gender
-
-  end
-
-  def text_office
-
-  end
-
-  def text_admission
-
-  end
-
-  def text_money
-
-  end
-  
 end

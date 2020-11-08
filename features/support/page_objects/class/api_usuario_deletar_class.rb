@@ -1,7 +1,6 @@
 # language: pt
 class DeleteUserApi
   def delete_user(url, emp)
-    
     @response = HTTParty.put(
       "#{$baseurl_api}#{url}/#{emp}",
       basic_auth: {
@@ -13,7 +12,6 @@ class DeleteUserApi
       },
       body: @body
     )
-    return @response
   end
 
   def response_code

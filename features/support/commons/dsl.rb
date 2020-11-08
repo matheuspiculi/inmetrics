@@ -6,7 +6,6 @@ module CommonTools
   def tag_scenario(tags)
     variavel_temp = tags[2]
     tag = variavel_temp[/(?<=\@)(.*?)$/]
-    return tag
   end
 
   def default_new_employee
@@ -25,12 +24,11 @@ module CommonTools
   def change_sexo_frontend(param)
     case param
     when 'm'
-      newSexo = 'Masculino'
+      @new_sexo = 'Masculino'
     when 'f'
-      newSexo = 'Feminino'
+      @new_sexo = 'Feminino'
     when 'i'
-      newSexo = 'Indefinido'
+      @new_sexo = 'Indefinido'
     end
-    return newSexo
   end
 end
