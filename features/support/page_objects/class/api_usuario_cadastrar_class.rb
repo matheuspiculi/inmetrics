@@ -26,7 +26,7 @@ class NewUserApi
       "nome": user_new[:nome],
       "salario": user_new[:salario],
       "sexo": user_new[:sexo],
-      "tipoContratacao": user_new[:tipoContratacao]
+      "tipoContratacao": user_new[:tipocontratacao]
     }.to_json
   end
 

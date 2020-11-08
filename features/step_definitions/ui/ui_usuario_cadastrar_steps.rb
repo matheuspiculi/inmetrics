@@ -3,7 +3,7 @@
 
 Dado('que esteja no modal de login de cadastro') do
     steps %{
-        Dado que esteja na página de login do site
+      Dado que esteja na página de login do site
     }
 end
 
