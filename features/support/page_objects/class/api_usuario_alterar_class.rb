@@ -48,7 +48,6 @@ class UpdateUserApi
       },
       body: @body
     )
-    return @response
   end
 
   def response_code

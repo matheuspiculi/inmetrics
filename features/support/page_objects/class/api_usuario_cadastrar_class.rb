@@ -65,8 +65,6 @@ class NewUserApi
     record_user_response['last_id_user_api']['tipoContratacao'] = @response['tipoContratacao']
     record_user_response['last_id_user_api']['id'] = @response['empregadoId']
 
-    File.open("#{Dir.pwd}/features/support/data/api_data.yaml", 'w') {
-      |f| f.write record_user_response.to_yaml
-    }
+    File.open("#{Dir.pwd}/features/support/data/api_data.yaml", 'w') { |f| f.write record_user_response.to_yaml }
   end
 end

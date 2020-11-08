@@ -5,7 +5,7 @@ module CommonTools
 
   def tag_scenario(tags)
     variavel_temp = tags[2]
-    tag = variavel_temp[/(?<=\@)(.*?)$/]
+    variavel_temp[/(?<=\@)(.*?)$/]
   end
 
   def default_new_employee

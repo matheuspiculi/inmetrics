@@ -50,5 +50,4 @@ class EmployeesPage < SitePrism::Page
   def names_colunas_tabela
     page.all('#tabela > thead > tr > th')
   end
-
 end

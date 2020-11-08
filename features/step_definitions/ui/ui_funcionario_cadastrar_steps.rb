@@ -14,13 +14,7 @@ end
 
 Quando('preencher os dados corretamente') do
   @employeenew = load_data_test('ui')
-  @employee = { nome: Faker::Name.name, cpf: Faker::IDNumber.brazilian_citizen_number(formatted: true), 
-  cargo: @employeenew[$tagscenario.to_s]['cargo'], 
-  salario: @employeenew[$tagscenario.to_s]['salario'], 
-  admissao: @employeenew[$tagscenario.to_s]['admissao'], 
-  sexo: @employeenew[$tagscenario.to_s]['sexo'], 
-  tipo_contratacao: @employeenew[$tagscenario.to_s]['tipo_contratacao'] 
-  }
+  @employee = { nome: Faker::Name.name, cpf: Faker::IDNumber.brazilian_citizen_number(formatted: true), cargo: @employeenew[$tagscenario.to_s]['cargo'], salario: @employeenew[$tagscenario.to_s]['salario'], admissao: @employeenew[$tagscenario.to_s]['admissao'], sexo: @employeenew[$tagscenario.to_s]['sexo'], tipo_contratacao: @employeenew[$tagscenario.to_s]['tipo_contratacao'] }
   @new_employees.fill_form_employee(@employee)
 end
 

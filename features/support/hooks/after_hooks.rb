@@ -11,12 +11,12 @@ at_exit do
   ReportBuilder.configure do |config|
     config.json_path = 'log/report.json'
     config.report_path = 'log/cucumber_web_report'
-    config.report_types = [:json, :html]
+    config.report_types = %i[json html]
     config.color = 'yellow'
     config.report_tabs = %w[Overview Features Scenarios Errors]
     config.report_title = 'InMetrics Report Web Automation Test Results'
     config.compress_images = false
-    config.additional_info = { 'Project name' => 'InMetrics', 'Browser' => "#{BROWSER}", 'Environment' => 'Desafio', 'Report generated' => time }
+    config.additional_info = { 'Project name' => 'InMetrics', 'Browser' => BROWSER.to_s, 'Environment' => 'Desafio', 'Report generated' => time }
   end
   ReportBuilder.build_report
 end
