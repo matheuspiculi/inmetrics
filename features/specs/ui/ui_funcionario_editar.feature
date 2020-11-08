@@ -34,4 +34,4 @@ Funcionalidade: [ UI ] Editar cadastro do funcionário
     E clicar no ícone de edição do primeiro usuário encontrado
     E preencher o cargo de forma inválida sendo "qa@"
     E enviar as informações
-    Então deverá retornar uma mensagem de erro "ERRO! Ops.. Não conseguimos atualizar as informações\n×"
+    Então deverá retornar uma mensagem de erro "ERRO! Ops.. Não conseguimos atualizar as informações\\n×"
