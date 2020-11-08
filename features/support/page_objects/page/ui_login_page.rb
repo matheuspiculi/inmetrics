@@ -53,4 +53,8 @@ class LoginPage < SitePrism::Page
   def visible_btn_sair
     btnSair.visible?
   end
+
+  def text_title_page
+    title_page.text
+  end
 end

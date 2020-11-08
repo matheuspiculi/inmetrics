@@ -29,6 +29,14 @@ Before('@ui_editar_funcionario_parcial_sucesso_individual') do
   default_new_employee
 end
 
+Before('@api_alterar_usuario_sucesso') do
+  default_new_employee
+end
+
+Before('@api_alterar_usuario_informacoes_invalidas') do
+  default_new_employee
+end
+
 Before('@api_alterar_usuario_401') do
   default_new_employee
 end
@@ -37,10 +45,10 @@ Before('@api_alterar_usuario_404') do
   default_new_employee
 end
 
-Before('@api_alterar_usuario_405') do
+Before('@api_alterar_usuario_400') do
   default_new_employee
 end
 
-Before('@api_alterar_usuario_informacoes_invalidas') do
+Before('@api_alterar_usuario_405') do
   default_new_employee
 end

@@ -24,7 +24,7 @@ Funcionalidade: [ UI ] Cadastrar Usuário
 
   @verificar_link_login_pelo_modal
   Cenário: Verificar redirecionamento do "login" pelo modal de cadastro
-    Dado que esteja no modal de login de cadastro
+    Dado que esteja na página de login do site
     Quando clicar em cadastre-se no modal de login
     E clicar em login no modal
     Então deverá ser redirecionado para o login

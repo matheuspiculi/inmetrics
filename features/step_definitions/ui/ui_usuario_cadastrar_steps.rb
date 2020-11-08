@@ -65,6 +65,7 @@ end
 
 Quando('clicar em login no modal') do
   @register.click_btn_login
+  expect(@login.text_title_page).to eq 'Login'
 end
 
 Entao('deverá retornar uma mensagem de erro do usuario {string}') do |message|

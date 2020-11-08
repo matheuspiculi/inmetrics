@@ -13,6 +13,10 @@ Dado('que esteja consultando um usuário para altera-lo') do
   @update_user_api.consult_last_register_user
 end
 
+E('que esteja consultando um usuário para altera-lo') do
+  @update_user_api.consult_last_register_user
+end
+
 Dado('informe novos dados para modificação') do
   @update_user_api.data_user
 end

@@ -6,7 +6,7 @@ Quando('pesquiso pelo usuário {string} para realizar a alteração') do |name|
 end
 
 E('clico no ícone de edição do primeiro usuário encontrado') do
-  @home.click_edit_employee
+  @employees.click_edit_employee
 end
 
 Quando('clicar no ícone de edição do primeiro usuário encontrado') do
@@ -34,6 +34,12 @@ Entao('as alterações deverão ter sido modificadas via editar') do
   steps %{
     E clico no ícone de edição do primeiro usuário encontrado
   }
+  expect(@edit_employees.text_nome).to eql(@userdel['last_id_user_api']['nome'])
+  expect(@edit_employees.text_cpf).to eql(@userdel['last_id_user_api']['cpf'])
+  expect(@edit_employees.text_sexo).to eql(@userdel['last_id_user_api']['sexo'])
   expect(@edit_employees.text_cargo).to eql(@edit_office)
   expect(@edit_employees.text_admissao).to eql(@edit_admission)
+  expect(@edit_employees.text_salario).to eql(@userdel['last_id_user_api']['salario'])
+  expect(@edit_employees.select_pj).to be true
+  expect(@edit_employees.select_clt).to be false
 end
