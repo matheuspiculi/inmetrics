@@ -11,6 +11,10 @@ require 'report_builder'
 require 'rubocop'
 require 'base64'
 require 'json-schema'
+require_relative "commons/dsl"
+include CommonTools
+
+World(CommonTools)
 
 BROWSER = ENV['BROWSER']
 CONFIG = YAML.load_file(File.join(Dir.pwd, '/features/support/config/config.yaml'))

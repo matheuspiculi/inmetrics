@@ -1,7 +1,4 @@
 Before do |scenario|
-  # Common
-  @common = Common.new
-
   # pages_ui
   @login = LoginPage.new
   @register = RegisterPage.new
@@ -16,7 +13,7 @@ Before do |scenario|
   @consult_user_api = ConsultUserApi.new
   @delete_user_api = DeleteUserApi.new
 
-  # .tag_scenario
+  # tag_scenario
   $tagscenario = @common.tag_scenario(scenario.source_tag_names)
 end
 

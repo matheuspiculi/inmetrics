@@ -13,7 +13,7 @@ Quando('clicar em novo funcionário') do
 end
 
 Quando('preencher os dados corretamente') do
-  @employeenew = @common.load_data_test('ui')
+  @employeenew = load_data_test('ui')
   @employee = { nome: Faker::Name.name, cpf: Faker::IDNumber.brazilian_citizen_number(formatted: true), 
   cargo: @employeenew[$tagscenario.to_s]['cargo'], 
   salario: @employeenew[$tagscenario.to_s]['salario'], 

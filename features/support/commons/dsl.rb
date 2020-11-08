@@ -1,4 +1,4 @@
-class Common
+module CommonTools
   def load_data_test(param)
     YAML.load_file(File.join(Dir.pwd, "/features/support/data/#{param}_data.yaml"))
   end

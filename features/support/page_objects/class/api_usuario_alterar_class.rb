@@ -2,12 +2,12 @@
 
 class UpdateUserApi
   def consult_last_register_user
-    record_user_response = @common.load_data_test('api')
+    record_user_response = load_data_test('api')
     @last_user = record_user_response['last_id_user_api']['id']
   end
 
   def data_user
-    dadosyaml = @common.load_data_test('api')
+    dadosyaml = load_data_test('api')
     @body = {
       "admissao": dadosyaml[$tagscenario.to_s]['admissao'],
       "cargo": dadosyaml[$tagscenario.to_s]['cargo'],
@@ -36,7 +36,7 @@ class UpdateUserApi
   end
 
   def put_user(url)
-    dadosyaml = @common.load_data_test('api')
+    dadosyaml = load_data_test('api')
     @response = HTTParty.put(
       "#{$baseurl_api}#{url}/#{@last_user}",
       basic_auth: {

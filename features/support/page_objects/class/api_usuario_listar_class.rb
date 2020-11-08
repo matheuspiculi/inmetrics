@@ -2,7 +2,7 @@
 
 class ConsultUserApi
   def consult_all(url)
-    dadosyaml = @common.load_data_test('api')
+    dadosyaml = load_data_test('api')
     @response = HTTParty.get(
       "#{$baseurl_api}#{url}",
       basic_auth: {
@@ -16,7 +16,7 @@ class ConsultUserApi
   end
 
   def consult_empregado(url, emp)
-    dadosyaml = @common.load_data_test('api')
+    dadosyaml = load_data_test('api')
     @response = HTTParty.get(
       "#{$baseurl_api}#{url}/#{emp}",
       basic_auth: {

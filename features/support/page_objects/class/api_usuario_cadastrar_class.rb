@@ -2,7 +2,7 @@
 
 class NewUserApi
   def data_newuser
-    dadosyaml = @common.load_data_test('api')
+    dadosyaml = load_data_test('api')
     @body = {
       "admissao": dadosyaml[$tagscenario.to_s]['admissao'],
       "cargo": dadosyaml[$tagscenario.to_s]['cargo'],
@@ -31,7 +31,7 @@ class NewUserApi
   end
 
   def post_data(url)
-    dadosyaml = @common.load_data_test('api')
+    dadosyaml = load_data_test('api')
     @response = HTTParty.post(
       "#{$baseurl_api}#{url}",
       basic_auth: {
