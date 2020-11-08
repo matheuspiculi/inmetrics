@@ -1,6 +1,6 @@
 # Profiles
-default: -p chrome -p bdd -p html -p json -p notpublishcucumber
-ci: -p chrome_headless -p bdd -p html -p json -p notpublishcucumber
+default: -p chrome -p bdd -p html -p notpublishcucumber
+ci: -p chrome_headless -p bdd -p json -p notpublishcucumber
 api_log: -p http_log -p api
 
 
