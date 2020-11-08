@@ -1,4 +1,3 @@
-# encoding: utf-8
 # language:pt
 
 @desafio
@@ -14,7 +13,7 @@ Funcionalidade: [ API ] Alterar Usuário
     Dado que esteja consultando um usuário para altera-lo
     E informe novos dados para modificação
     Quando enviar a solicitação para o serviço "empregado/alterar"
-    Então deverá retornar o response 202
+    Então deverá retornar o response 200
     
   @api_alterar_usuario_informacoes_invalidas
   Esquema do Cenário: Realizar alteração com informações inválidas
@@ -41,14 +40,14 @@ Funcionalidade: [ API ] Alterar Usuário
       | 07/02/2020  | qa     | 250.00,00  | 021.346.190-07  | 8k        | 8.300,00  | m     |    1         | pessoa física   | tipoContratacao: pj ou clt                          |
 
   @api_alterar_usuario_401
-  Cenário: Erro 401
+  Cenário: Erro 401 - Unauthorized
     Dado as credenciais invalidas
     E que esteja consultando um usuário para altera-lo
     Quando realizo a consulta "/empregado/alterar"
     Então o retorno do serviço deverá ser 401
 
   @api_alterar_usuario_404
-  Cenário: Erro 404
+  Cenário: Erro 404 - Not Found
     Dado que esteja consultando um usuário para altera-lo
     Quando realizo a consulta "empregado/alterarr"
     Então o retorno do serviço deverá ser 404

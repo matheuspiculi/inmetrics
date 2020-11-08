@@ -1,8 +1,6 @@
-# encoding: utf-8
 # language:pt
 
 class RegisterPage < SitePrism::Page
-  
   element :title_page, '.login100-form-title'
   element :username, 'input[name="username"]'
   element :password, 'input[name="pass"]'
@@ -19,33 +17,33 @@ class RegisterPage < SitePrism::Page
   element :error_message_user, '.p-b-1 span.txt1 .m-t-17'
     
   def home
-    visit "/accounts/signup/"
+    visit '/accounts/signup/'
   end
 
   def fill_form_user
     fill_name
-    fill_password("123456")
-    fill_confirm_password("123456")
+    fill_password('123456')
+    fill_confirm_password('123456')
     click_btn_register
   end
 
   def fill_name_register(name_register)
     username.set(name_register)
-    fill_password("123456")
-    fill_confirm_password("123456")
+    fill_password('123456')
+    fill_confirm_password('123456')
     click_btn_register
   end
 
   def fill_form_user_existent(name)
     username.set(name)
-    fill_password("123456")
-    fill_confirm_password("123456")
+    fill_password('123456')
+    fill_confirm_password('123456')
     click_btn_register
   end
 
   def fill_name
     name = Faker::Name.name_with_middle
-    username.set(name.gsub!(" ",""))
+    username.set(name.gsub!(' ', ''))
   end
 
   def fill_password(password01)
@@ -56,31 +54,31 @@ class RegisterPage < SitePrism::Page
     confirm_password.set(password02)
   end
 
-  def getUsarnameValue
+  def usarname_value
     username.value
   end
 
-  def getPasswordValue
+  def password_value
     password.value
   end
 
-  def getConfirmPassawordValue
+  def confirm_passaword_value
     confirm_password.value
   end
 
-  def getUsernameClass
+  def username_class
     errorUsername[:class]
   end
 
-  def getPasswordClass
+  def password_class
     errorPassword[:class]
   end
 
-  def getConfirmPasswordClass
+  def confirm_password_class
     errorConfirmPassword[:class]
   end
 
-  def geterrorInvalidName
+  def error_invalid_name
     invalid_name.text
   end
 
@@ -91,5 +89,4 @@ class RegisterPage < SitePrism::Page
   def click_btn_login
     btn_login.click
   end
-
 end

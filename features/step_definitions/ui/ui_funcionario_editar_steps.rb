@@ -1,4 +1,4 @@
-# encoding: utf-8
+
 # language:pt
 
 Quando('pesquiso pelo usuário {string} para realizar a alteração') do |name|
@@ -7,7 +7,7 @@ Quando('pesquiso pelo usuário {string} para realizar a alteração') do |name|
 end
 
 E("clico no ícone de edição do primeiro usuário encontrado") do
-    @home.click_edit_employee    
+  @home.click_edit_employee    
 end
 
 Quando('pesquisar pelo usuário {string}') do |name|

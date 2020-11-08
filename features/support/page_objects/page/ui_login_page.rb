@@ -1,8 +1,6 @@
-# encoding: utf-8
 # language:pt
 
 class LoginPage < SitePrism::Page
-  
   element :title_page, '.login100-form-title'
   element :username, 'input[name="username"]'
   element :usernameInvalid, 'div.container-login100 > div > form div:nth-child(5)'
@@ -16,7 +14,7 @@ class LoginPage < SitePrism::Page
   element :btnSair, 'a[href*="logout"]'
 
   def home
-    visit "/accounts/login/"
+    visit '/accounts/login/'
   end
 
   def logout
@@ -32,8 +30,8 @@ class LoginPage < SitePrism::Page
   end
 
   def login_user(dataui)
-    username.set(dataui["email"])
-    password.set(dataui["password"])
+    username.set(dataui['email'])
+    password.set(dataui['password'])
   end
 
   def click_enter
@@ -44,16 +42,15 @@ class LoginPage < SitePrism::Page
     link_register.click
   end
 
-  def getclassUsernameField
+  def class_username_field
     usernameInvalid[:class]
   end
 
-  def getclassPasswordField
+  def class_password_field
     passwordInvalid[:class]
   end
 
-  def findbtnSair
-    wait_until { btnSair.visible? }
+  def visible_btn_sair
+    btnSair.visible?
   end
-  
 end

@@ -26,7 +26,7 @@ Style/GlobalVars:
   Enabled: false
 
 AllCops:
-  TargetRubyVersion: 2.3
+  TargetRubyVersion: 2.5.7
 
 Style/FrozenStringLiteralComment:
   Enabled: false
@@ -42,3 +42,6 @@ Style/HashTransformKeys:
 
 Style/HashTransformValues:
   Enabled: false
+
+Style/EndOfLine:
+  EnforcedStyle: lf

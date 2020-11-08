@@ -1,6 +1,8 @@
 # Profiles
-default: -p chrome_headless -p bdd -p html -p json --publish-quiet
+default: -p chrome -p bdd -p html -p json -p notpublishcucumber
+ci: -p chrome_headless -p bdd -p html -p json -p notpublishcucumber
 api_log: -p http_log -p api
+
 
 
 # Reports
@@ -29,3 +31,6 @@ json: --format json --out=log/report.json
 
 # API Config
 api: ENVIRONMENT_TYPE_API=api_log
+
+# Publish Cucumber Report
+notpublishcucumber: --publish-quiet
