@@ -23,6 +23,9 @@ Entao('as alterações deverão ter sido modificadas via painel') do
   steps %{
     Quando pesquisar pelo usuário cadastrado
   }
+  expect(@employees.value_table[0].text).to eql(@userdel['last_id_user_api']['nome'])
+  expect(@employees.value_table[1].text).to eql(@userdel['last_id_user_api']['cpf'])
+  expect(@employees.value_table[2].text).to eql(@common.change_sexo_frontend(@userdel['last_id_user_api']['sexo']))
   expect(@employees.value_table[3].text).to eql(@edit_office)
   expect(@employees.value_table[4].text).to eql(@edit_admission)
 end

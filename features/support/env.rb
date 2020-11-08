@@ -11,14 +11,9 @@ require 'report_builder'
 require 'rubocop'
 require 'base64'
 require 'json-schema'
-require_relative 'commons/dsl'
-
-include Common
-
-World(Common)
 
 BROWSER = ENV['BROWSER']
-CONFIG = load_config_env
+CONFIG = YAML.load_file(File.join(Dir.pwd, '/features/support/config/config.yaml'))
 
 Capybara.register_driver :selenium do |app|
   case BROWSER

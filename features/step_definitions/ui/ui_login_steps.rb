@@ -14,28 +14,28 @@ Dado('que esteja na página de login acessando pelo link do cabeçalho') do
 end
 
 Quando('preencher o usuário e senha') do
-  @dataui = load_data_test('ui')
+  @dataui = @common.load_data_test('ui')
   @login.login_user(@dataui['user_login'])
 end
 
 Quando('preencher o nome com um usuário inválido e senha correta') do
-  @dataui = load_data_test('ui')
+  @dataui = @common.load_data_test('ui')
   @login.login_user(@dataui['username_invalid'])
 end
 
 Quando('preencher o usuário e a senha incorreta') do
-  @dataui = load_data_test('ui')
+  @dataui = @common.load_data_test('ui')
   @login.login_user(@dataui['password_invalid'])
 end
 
 Quando('preencher o nome com um usuário nao preenchido e senha correta') do
-  @dataui = load_data_test('ui')
+  @dataui = @common.load_data_test('ui')
   @login.login_user(@dataui['username_blank'])
   expect(@login.class_username_field).to eq 'wrap-input100 validate-input'
 end
 
 Quando('preencher o nome com um usuário preenchido e senha nao preenchida') do
-  @dataui = load_data_test('ui')
+  @dataui = @common.load_data_test('ui')
   @login.login_user(@dataui['password_blank'])
   expect(@login.class_password_field).to eq 'wrap-input100 validate-input'
 end

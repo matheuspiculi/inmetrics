@@ -1,5 +1,9 @@
 After do |scenario|
-  add_screenshot
+  file_path = 'log/screenshot.png'
+  Capybara.current_session.driver.browser.save_screenshot(file_path)
+  image = open(file_path, 'rb', &:read)
+  encoded_image = Base64.encode64(image)
+  attach(encoded_image, 'image/png')
 end
 
 at_exit do
@@ -7,7 +11,7 @@ at_exit do
   ReportBuilder.configure do |config|
     config.json_path = 'log/report.json'
     config.report_path = 'log/cucumber_web_report'
-    config.report_types = [:retry, :html]
+    config.report_types = [:json, :html]
     config.color = 'yellow'
     config.report_tabs = %w[Overview Features Scenarios Errors]
     config.report_title = 'InMetrics Report Web Automation Test Results'

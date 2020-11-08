@@ -1,8 +1,18 @@
 ---
 last_id_user_api:
-  nome: Teddy Stroman
-  cpf: '089.848.503-73'
-  id: 5499
+  admissao: 20/08/2020
+  cargo: desenvolvedor
+  comissao: 150.000,00
+  cpf: 060.816.098-98
+  departamentoId: 
+  nome: Deadra Fay
+  salario: 150.000,00
+  sexo: m
+  tipoContratacao: pj
+  id: 5503
+deleteuser:
+  username_api: inmetrics
+  password_api: automacao
 api_cadastrar_usuario_sucesso:
   username_api: inmetrics
   password_api: automacao

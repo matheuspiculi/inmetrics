@@ -2,7 +2,7 @@
 
 class NewUserApi
   def data_newuser
-    dadosyaml = load_data_test('api')
+    dadosyaml = @common.load_data_test('api')
     @body = {
       "admissao": dadosyaml[$tagscenario.to_s]['admissao'],
       "cargo": dadosyaml[$tagscenario.to_s]['cargo'],
@@ -31,7 +31,7 @@ class NewUserApi
   end
 
   def post_data(url)
-    dadosyaml = load_data_test('api')
+    dadosyaml = @common.load_data_test('api')
     @response = HTTParty.post(
       "#{$baseurl_api}#{url}",
       basic_auth: {
@@ -55,8 +55,14 @@ class NewUserApi
 
   def record_user_response
     record_user_response = YAML.load_file(File.join(Dir.pwd, '/features/support/data/api_data.yaml'))
-    record_user_response['last_id_user_api']['nome'] = @response['nome']
+    record_user_response['last_id_user_api']['admissao'] = @response['admissao']
+    record_user_response['last_id_user_api']['cargo'] = @response['cargo']
+    record_user_response['last_id_user_api']['comissao'] = @response['comissao']
     record_user_response['last_id_user_api']['cpf'] = @response['cpf']
+    record_user_response['last_id_user_api']['nome'] = @response['nome']
+    record_user_response['last_id_user_api']['salario'] = @response['salario']
+    record_user_response['last_id_user_api']['sexo'] = @response['sexo']
+    record_user_response['last_id_user_api']['tipoContratacao'] = @response['tipoContratacao']
     record_user_response['last_id_user_api']['id'] = @response['empregadoId']
 
     File.open("#{Dir.pwd}/features/support/data/api_data.yaml", 'w') {

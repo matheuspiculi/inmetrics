@@ -1,32 +1,36 @@
-module Common
+class Common
   def load_data_test(param)
     YAML.load_file(File.join(Dir.pwd, "/features/support/data/#{param}_data.yaml"))
   end
 
-  def load_config_env
-    YAML.load_file(File.join(Dir.pwd, '/features/support/config/config.yaml'))
-  end
-
-  def add_screenshot
-    file_path = 'log/screenshot.png'
-    page.driver.browser.save_screenshot(file_path)
-    image = open(file_path, 'rb', &:read)
-    encoded_image = Base64.encode64(image)
-    embed(encoded_image, 'image/png;base64', 'SCREENSHOT')
-  end
-
   def tag_scenario(tags)
-    tag = ''
     variavel_temp = tags[2]
     tag = variavel_temp[/(?<=\@)(.*?)$/]
     return tag
   end
 
-  def text_alert_box
-    page.driver.browser.switch_to.alert.text
+  def default_new_employee
+    @new_user_api.data_newuser
+    @new_user_api.post_data('empregado/cadastrar')
+    @new_user_api.record_user_response
+    sleep 2
   end
 
-  def accept_alert_box
-    page.driver.browser.switch_to.alert.accept
+  def default_delete_employee(emp)
+    @delete_user_api.delete_user('empregado/deletar', emp)
+    expect(@delete_user_api.response_code).to eq 200
+    sleep 2
+  end
+
+  def change_sexo_frontend(param)
+    case param
+    when 'm'
+      newSexo = 'Masculino'
+    when 'f'
+      newSexo = 'Feminino'
+    when 'i'
+      newSexo = 'Indefinido'
+    end
+    return newSexo
   end
 end

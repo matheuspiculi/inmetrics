@@ -9,16 +9,13 @@ Funcionalidade: [ UI ] Cadastro de funcionário
   Para poder ter controle e manutenção do mesmo
 
   @ui_cadastrar_funcionario_sucesso
-  Esquema do Cenário: Realizar cadastro de um funcionário com sucesso
+  Cenário: Realizar cadastro de um funcionário com sucesso
     Dado que esteja na página de empregados
     Quando clicar em novo funcionário
-    E preencher os dados "<nome>", "<cpf>", "<cargo>", "<salario>", "<admissao>", "<sexo>", "<tipo_contratacao>"
+    E preencher os dados corretamente
     E enviar as informações
     Então deverá retornar uma mensagem de sucesso "SUCESSO! Usuário cadastrado com sucesso"
-
-    Exemplos:
-      | nome             | cpf            | cargo | salario | admissao   | sexo      | tipo_contratacao |
-      | Matheus Piculi   | 440.356.978-18 | QA    | 9854    | 05/11/2020 | Masculino | CLT              |
+    E exibir as informações corretamente no painel
 
   @ui_cadastrar_funcionario_cpfinvalido
   Cenário: Validar a mensagem de erro sobre CPF inválido

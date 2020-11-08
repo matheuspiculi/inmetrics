@@ -14,3 +14,10 @@ username_blank:
 password_blank:
   email: 'matheuspiculi'
   password: ''
+ui_cadastrar_funcionario_sucesso:
+  cargo: 'QA'
+  salario: '7.500,00'
+  admissao: '31/12/2020'
+  sexo: 'Masculino'
+  tipo_contratacao: 'PJ'
+  

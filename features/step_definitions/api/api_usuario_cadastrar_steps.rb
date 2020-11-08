@@ -20,6 +20,6 @@ Entao('a mensagem deverá ser {string}') do |message|
   expect(@new_user_api.response_data).to include message
 end
 
-E('também deverá salvar o id, nome, cpf do usuário para realizar consultas futuras') do
+E('também deverá salvar suas informações para realizar consultas futuras') do
   @new_user_api.record_user_response
 end

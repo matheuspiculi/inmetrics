@@ -8,6 +8,8 @@ class EmployeesPage < SitePrism::Page
   elements :btn_delete, '#delete-btn'
   elements :btn_change, '.fa.fa-pencil'
   elements :value_table, '#tabela tr td'
+  elements :colunasTabela, '#tabela > thead > tr > th'
+
   def home
     visit '/empregados/'
   end
@@ -22,6 +24,7 @@ class EmployeesPage < SitePrism::Page
 
   def search_name_employee(name)
     filter_table.set(name)
+    sleep 1
   end
 
   def click_delete_employee
@@ -39,4 +42,37 @@ class EmployeesPage < SitePrism::Page
   def name_table_employee
     value_table[0].text
   end
+
+  def count_colunas_tabela
+    colunasTabela.count
+  end
+
+  def names_colunas_tabela
+    page.all('#tabela > thead > tr > th')
+  end
+
+  def text_name
+
+  end
+
+  def text_cpf
+
+  end
+
+  def text_gender
+
+  end
+
+  def text_office
+
+  end
+
+  def text_admission
+
+  end
+
+  def text_money
+
+  end
+  
 end
