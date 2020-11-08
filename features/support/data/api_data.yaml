@@ -1,8 +1,8 @@
 ---
 last_id_user_api:
-  nome: 
-  cpf: 
-  id: 
+  nome: Ernie Deckow Beahan
+  cpf: '082.976.621-95'
+  id: 5463
 api_cadastrar_usuario_sucesso:
   username_api: inmetrics
   password_api: automacao
@@ -80,6 +80,13 @@ api_alterar_usuario_sucesso_405:
 api_alterar_usuario_informacoes_invalidas:
   username_api: inmetrics
   password_api: automacao
+  admissao: 20/08/2020
+  cargo: desenvolvedor
+  comissao: 150.00,00
+  departamentoId: 1
+  salario: 150.00,00
+  sexo: m
+  tipoContratacao: pj
 api_cadastrar_usuario_400:
   username_api: inmetrics
   password_api: automacao
