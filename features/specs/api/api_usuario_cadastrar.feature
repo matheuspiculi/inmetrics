@@ -39,13 +39,13 @@ Funcionalidade: [ API ] Cadastrar usuário
       | 11/02/2020  | gerente qa    | 250.00,00  | 021.346.190-07  | luis      | 4.200,00  | m     |    1         | pessoa física   | tipoContratacao: pj ou clt                          |  
 
   @api_cadastrar_usuario_401
-  Cenário: Erro 401
+  Cenário: Erro 401 - Unauthorized
     Dado que possuo um usuário para cadastro
     Quando enviar a solicitação post para o endereço "empregado/cadastrar"
     Então o retorno do serviço deverá ser 401
 
   @api_cadastrar_usuario_404
-  Cenário: Erro 404
+  Cenário: Erro 404 - Not Found
     Dado que possuo um usuário para cadastro
     Quando enviar a solicitação post para o endereço "empregado/cadastrarr"
     Então o retorno do serviço deverá ser 404
