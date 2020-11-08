@@ -57,11 +57,11 @@
 
 2. Para executar somente uma feature, por exemplo:
 
-> cucumber --profile deafult --tag @ui_painel_funcionario
+> cucumber --profile default --tag @ui_painel_funcionario
 
 3. Para executar somente um cenário de teste, por exemplo:
 
-> cucumber --profile deafult --tag @ui_painel_funcionario_colunastabela
+> cucumber --profile default --tag @ui_painel_funcionario_colunastabela
 
 # Jenkins
 
