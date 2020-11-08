@@ -52,6 +52,13 @@ Funcionalidade: [ API ] Alterar Usuário
     Quando realizo a consulta "empregado/alterarr"
     Então o retorno do serviço deverá ser 404
 
+  @api_alterar_usuario_400
+  Cenário: Erro 400 - Undocumented
+    Dado que esteja consultando um usuário para altera-lo
+    E o empregado "58785545555554554"
+    Quando realizo a consulta "empregado/alterar"
+    Então o retorno do serviço deverá ser 400
+
   @api_alterar_usuario_405
   Cenário: Erro 405
     Dado que esteja consultando um usuário para altera-lo

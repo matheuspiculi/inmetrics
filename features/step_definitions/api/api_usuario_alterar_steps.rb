@@ -21,7 +21,7 @@ end
 Quando('enviar a solicitação para o serviço {string}') do |url|
   @update_user_api.put_user(url)
 end
-  
+
 Então('deverá retornar o response {int}') do |code|
   expect(@update_user_api.response_code).to eq code 
 end

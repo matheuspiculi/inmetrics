@@ -54,6 +54,8 @@ class NewUserApi
   end
 
   def record_user_response
+    puts @response
+    puts @response['nome'].class
     record_user_response = YAML.load_file(File.join(Dir.pwd, "/features/support/data/api_data.yaml"))
     record_user_response['last_id_user_api']['nome'] = @response['nome']
     record_user_response['last_id_user_api']['cpf'] = @response['cpf']
