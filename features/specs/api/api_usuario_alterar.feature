@@ -29,15 +29,22 @@ Funcionalidade: [ API ] Alterar Usuário
       |             | qa     | 250.00,00  | 021.346.190-07  | 8k        | 8.300,00  | m     |    2         | pj              | admissao: must not be blank                         |
       | 07/02/2020  | qa1    | 250.00,00  | 021.346.190-07  | 8k        | 8.300,00  | m     |    1         | pj              | cargo: não utilizar números ou caracteres especiais |    
       | 07/02/2020  | qa@    | 250.00,00  | 021.346.190-07  | 8k        | 8.300,00  | m     |    1         | pj              | cargo: não utilizar números ou caracteres especiais | 
+      | 07/02/2020  |        | 250.00,00  | 021.346.190-07  | 8k        | 8.300,00  | m     |    1         | pj              | cargo: must not be blank                            |
       | 07/02/2020  | qa     | 200        | 021.346.190-07  | 8k        | 8.300,00  | m     |    3         | pj              | comissao: deve estar no padrão 1.000,00             |
+      | 07/02/2020  | qa     |            | 021.346.190-07  | 8k        | 8.300,00  | m     |    3         | pj              | comissao: must not be blank                         |
       | 07/02/2020  | qa     | 250.00,00  | 8512.222.333-88 | 8k        | 8.300,00  | m     |    4         | pj              | cpf: deve estar no padrão 111.222.333-00            |
+      | 07/02/2020  | qa     | 250.00,00  |                 | 8k        | 8.300,00  | m     |    4         | pj              | cpf: must not be blank                              |
       | 07/02/2020  | qa     | 250.00,00  | 021.346.190-07  | 8k        | 8.300,00  | m     |    1         | pj              | nome: não utilizar números ou caracteres especiais  |
       | 07/02/2020  | qa     | 250.00,00  | 021.346.190-07  | @8k       | 8.300,00  | m     |    1         | pj              | nome: não utilizar números ou caracteres especiais  |
+      | 07/02/2020  | qa     | 250.00,00  | 021.346.190-07  |           | 8.300,00  | m     |    1         | pj              | nome: must not be blank                             |
       | 07/02/2020  | qa     | 250.00,00  | 021.346.190-07  | 8k        | 100       | m     |    1         | pj              | salario: deve estar no padrão 1.000,00              |
+      | 07/02/2020  | qa     | 250.00,00  | 021.346.190-07  | 8k        |           | m     |    1         | pj              | salario: must not be blank                          |
       | 07/02/2020  | qa     | 250.00,00  | 021.346.190-07  | 8k        | 8.300,00  | masc  |    1         | pj              | sexo: m, f ou i                                     |
+      | 07/02/2020  | qa     | 250.00,00  | 021.346.190-07  | 8k        | 8.300,00  |       |    1         | pj              | sexo: must not be blank                             |
       | 07/02/2020  | qa     | 250.00,00  | 021.346.190-07  | 8k        | 8.300,00  | m     |    0         | pj              | Departamento não cadastrado                         |
       | 07/02/2020  | qa     | 250.00,00  | 021.346.190-07  | 8k        | 8.300,00  | m     |    null      | pj              | departamentoId: must not be null                    |
       | 07/02/2020  | qa     | 250.00,00  | 021.346.190-07  | 8k        | 8.300,00  | m     |    1         | pessoa física   | tipoContratacao: pj ou clt                          |
+      | 07/02/2020  | qa     | 250.00,00  | 021.346.190-07  | 8k        | 8.300,00  | m     |    1         |                 | tipoContratacao: must not be blank                  |
 
   @api_alterar_usuario_401
   Cenário: Erro 401 - Unauthorized
