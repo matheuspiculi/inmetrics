@@ -1,4 +1,3 @@
-
 # language:pt
 
 Dado('que estou listando os usuários {string}') do |url|

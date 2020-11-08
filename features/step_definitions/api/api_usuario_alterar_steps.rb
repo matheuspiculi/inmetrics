@@ -1,4 +1,3 @@
-
 # language:pt
   
 Dado('esteja informando os dados {string} {string} {string} {string} {string} {string} {string} {string} {string}') do |admissao, cargo, comissao, cpf, nome, salario, sexo, departamento, tipocontratacao|

@@ -1,4 +1,3 @@
-
 # language:pt
 
 Dado('que esteja na página de empregados') do

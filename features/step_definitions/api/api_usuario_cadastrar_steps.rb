@@ -1,4 +1,3 @@
-
 # language:pt
 
 Dado("que possuo um usuário para cadastro") do

@@ -1,4 +1,3 @@
-
 # language:pt
 
 Quando('pesquisar pelo usuário cadastrado') do

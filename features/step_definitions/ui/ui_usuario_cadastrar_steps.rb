@@ -1,4 +1,3 @@
-
 # language:pt
 
 Dado('que esteja no modal de login de cadastro') do

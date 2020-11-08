@@ -1,4 +1,3 @@
-
 # language:pt
 
 Quando('pesquiso pelo usuário {string} para realizar a alteração') do |name|

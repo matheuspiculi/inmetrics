@@ -1,4 +1,3 @@
-
 # language:pt
 
 Quando('verifico as colunas da tabela de funcionarios') do
