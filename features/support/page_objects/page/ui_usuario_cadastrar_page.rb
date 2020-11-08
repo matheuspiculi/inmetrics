@@ -89,4 +89,8 @@ class RegisterPage < SitePrism::Page
   def click_btn_login
     btn_login.click
   end
+
+  def get_text_erro_message
+    error_message.text
+  end
 end

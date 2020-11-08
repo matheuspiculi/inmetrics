@@ -68,7 +68,7 @@ Quando('clicar em login no modal') do
 end
   
 Então('deverá retornar uma mensagem de erro do usuario {string}') do |message|
-  expect(@register.error_message.text).to eql(message)
+  expect(@register.get_text_erro_message).to eql(message)
 end
 
 Dado('preencher o nome {string}') do |name_register|
