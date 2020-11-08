@@ -34,4 +34,4 @@ Funcionalidade: [ UI ] Cadastro de funcionário
     Quando clicar em novo funcionário
     E preencher o cargo de forma inválida sendo "qa@"
     E enviar as informações
-    Então deverá retornar uma mensagem de erro "ERRO! Ops.. Tivemos um erro ao tentar cadastrar o funcionário\n×"
+    Então deverá retornar uma mensagem de erro "ERRO! Ops.. Tivemos um erro ao tentar cadastrar o funcionário\\n×"
