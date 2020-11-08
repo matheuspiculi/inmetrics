@@ -1,15 +1,15 @@
 ---
 last_id_user_api:
-  admissao: 
-  cargo: 
-  comissao: 
-  cpf: 
+  admissao: 20/08/2020
+  cargo: desenvolvedor
+  comissao: 150.00,00
+  cpf: 041.711.406-09
   departamentoId: 
-  nome: 
-  salario: 
-  sexo: 
-  tipoContratacao: 
-  id: 
+  nome: Vicente Labadie
+  salario: 150.00,00
+  sexo: m
+  tipoContratacao: pj
+  id: 5586
 deleteuser:
   username_api: inmetrics
   password_api: automacao
