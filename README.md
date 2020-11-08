@@ -6,11 +6,12 @@
 - Pré-requisitos
 - Configuração do Ambiente
 - Configurando o projeto
-
+- Executando os testes
+- Jenkins
 
 # Pré-Requisitos
 
-- Ruby Install [Version 2.5.8 with MSYS2]
+- Ruby Install [Version 2.5.7 with MSYS2]
 
 > - Windows: https://www.ruby-lang.org/pt/downloads/
 
@@ -32,7 +33,7 @@
 
 > cd C:\
 
-2. Clone o repositório do gitlab
+2. Clone o repositório do gitlab pelo CMDER
 
 > git clone git@github.com:matheuspiculi/inmetrics.git
 
@@ -40,10 +41,28 @@
 
 > cd C:\inmetrics
 
-4. Instale as dependências via comandos
+4. Instale as dependências pelo CMDER
 
 > gem uninstall -aIx
 
 > gem install bundler
 
 > bundle install
+
+# Executando os testes
+
+1. Para executar todo o projeto 
+
+> cucumber --profile default --tag @desafio
+
+2. Para executar somente uma feature, por exemplo:
+
+> cucumber --profile deafult --tag @ui_painel_funcionario
+
+3. Para executar somente um cenário de teste, por exemplo:
+
+> cucumber --profile deafult --tag @ui_painel_funcionario_colunastabela
+
+# Jenkins
+
+> O Jenkins atualmente está configurado para executar todo o projeto 2x ao dia ás 09:00 e as 18:00 de segunda-feira e sexta-feira
