@@ -8,22 +8,22 @@ Funcionalidade: [ UI ] Editar cadastro do funcionário
   Quero realizar edição cadastro do funcionário
   Para poder ter controle e manutenção do mesmo
 
-  @ui_editar_funcionario_sucesso_painel
-  Cenário: Realizar edição do usuário e validar via painel
+  @ui_editar_funcionario_parcial_sucesso_painel
+  Cenário: Realizar edição parcial do usuário e validar via painel
     Dado que esteja na página de empregados
     Quando pesquisar pelo usuário cadastrado
     E clicar no ícone de edição do primeiro usuário encontrado
-    Quando alterar as seguintes informações de cargo "EDITPAINEL" e admissão "20/09/2020" 
+    Quando alterar as seguintes informações de cargo "EDITPAINEL" e admissão "31/12/2020" 
     E enviar as informações
     Então deverá retornar uma mensagem de sucesso "SUCESSO! Informações atualizadas com sucesso"
     E as alterações deverão ter sido modificadas via painel
 
-  @ui_editar_funcionario_sucesso_individual
-  Cenário: Realizar edição do usuário e validar via botao editar
+  @ui_editar_funcionario_parcial_sucesso_individual
+  Cenário: Realizar edição parcial do usuário e validar via botao editar
     Dado que esteja na página de empregados
     Quando pesquisar pelo usuário cadastrado
     E clicar no ícone de edição do primeiro usuário encontrado
-    Quando alterar as seguintes informações de cargo "EDITEDITAR" e admissão "31/12/2020" 
+    Quando alterar as seguintes informações de cargo "EDITEDITAR" e admissão "24/03/2020" 
     E enviar as informações
     Então deverá retornar uma mensagem de sucesso "SUCESSO! Informações atualizadas com sucesso"
     E as alterações deverão ter sido modificadas via editar

@@ -4,7 +4,8 @@ Quando('pesquisar pelo usuário cadastrado') do
   @userdel = load_data_test('api')
   @employees.search_name_employee(@userdel['last_id_user_api']['nome'])
   sleep 1
-  expect(@employees.table_qtd_filter).to include "Mostrando os registros de 1 a 1 de um total de 1"
+  expect(@employees.table_qtd_filter).to include "Mostrando os registros de 1 a 1 de um total de 1 (filtrado de um total de"
+  expect(@employees.get_name_table_employee).to eq @userdel['last_id_user_api']['nome']
 end
 
 Quando('clicar no ícone de exclusão do primeiro usuário encontrado') do

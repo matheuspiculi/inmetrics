@@ -24,14 +24,14 @@ Before('@ui_excluir_funcionario_sucesso') do
   sleep 2
 end
 
-Before('@ui_editar_funcionario_sucesso_painel') do
+Before('@ui_editar_funcionario_parcial_sucesso_painel') do
   @new_user_api.data_new_user
   @new_user_api.post_data('empregado/cadastrar')
   @new_user_api.record_user_response
   sleep 2
 end
 
-Before('@ui_editar_funcionario_sucesso_individual') do
+Before('@ui_editar_funcionario_parcial_sucesso_individual') do
   @new_user_api.data_new_user
   @new_user_api.post_data('empregado/cadastrar')
   @new_user_api.record_user_response

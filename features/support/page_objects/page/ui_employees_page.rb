@@ -37,4 +37,9 @@ class EmployeesPage < SitePrism::Page
   def table_qtd_filter
     table_info.text
   end
+
+  def get_name_table_employee
+    value_table[0].text
+  end
+  
 end
