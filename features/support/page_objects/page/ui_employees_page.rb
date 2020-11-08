@@ -5,6 +5,7 @@ class EmployeesPage < SitePrism::Page
   element :filter_table, '#tabela_filter input'
   element :message_edit, '.alert.alert-success.alert-dismissible'
   element :employee_head, 'a[href="/empregados/"]'
+  element :table_info, '#tabela_info'
   elements :btn_delete, '#delete-btn'
   elements :btn_change, '.fa.fa-pencil'
   elements :value_table, '#tabela tr td'
@@ -31,5 +32,9 @@ class EmployeesPage < SitePrism::Page
 
   def click_edit_employee
     btn_change.first.click
+  end
+
+  def table_qtd_filter
+    table_info.text
   end
 end

@@ -13,7 +13,7 @@ Funcionalidade: [ UI ] Editar cadastro do funcionário
     Dado que esteja na página de empregados
     Quando pesquisar pelo usuário cadastrado
     E clicar no ícone de edição do primeiro usuário encontrado
-    Quando alterar as seguintes informações de cargo "QA" e admissão "20/09/9999" 
+    Quando alterar as seguintes informações de cargo "QANEWEDIT" e admissão "20/09/2020" 
     E enviar as informações
     Então deverá retornar uma mensagem de sucesso "SUCESSO! Informações atualizadas com sucesso"
     E as alterações deverão ter sido modificadas

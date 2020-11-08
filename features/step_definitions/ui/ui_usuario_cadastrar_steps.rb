@@ -2,9 +2,9 @@
 # language:pt
 
 Dado('que esteja no modal de login de cadastro') do
-    steps %{
-      Dado que esteja na página de login do site
-    }
+  steps %{
+    Dado que esteja na página de login do site
+  }
 end
 
 Quando('clicar em cadastre-se no modal de login') do
