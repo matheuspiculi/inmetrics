@@ -49,5 +49,5 @@ Entao('deverá retornar uma mensagem de erro como alerta {string}') do |message|
 end
 
 Entao('deverá retornar uma mensagem de erro {string}') do |message|
-  expect(@new_employees.text_msg_error).to eq(message)
+  expect(@new_employees.text_msg_error).to include message
 end
