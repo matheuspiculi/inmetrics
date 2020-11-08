@@ -1,4 +1,4 @@
-# language:pt
+# language: pt
 
 class EditEmployeesPage < SitePrism::Page
   element :input_office, '#inputCargo'
@@ -9,11 +9,11 @@ class EditEmployeesPage < SitePrism::Page
     input_admission.set(edit_admission)
   end
 
-  def get_text_cargo
+  def text_cargo
     input_office.value
   end
 
-  def get_text_admissao
+  def text_admissao
     input_office.value
   end
 end

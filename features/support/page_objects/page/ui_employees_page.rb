@@ -1,5 +1,4 @@
-# language:pt
-
+# language: pt
 class EmployeesPage < SitePrism::Page
   element :table_employees, '#tabela'
   element :filter_table, '#tabela_filter input'
@@ -9,7 +8,6 @@ class EmployeesPage < SitePrism::Page
   elements :btn_delete, '#delete-btn'
   elements :btn_change, '.fa.fa-pencil'
   elements :value_table, '#tabela tr td'
-  
   def home
     visit '/empregados/'
   end
@@ -38,8 +36,7 @@ class EmployeesPage < SitePrism::Page
     table_info.text
   end
 
-  def get_name_table_employee
+  def name_table_employee
     value_table[0].text
   end
-  
 end

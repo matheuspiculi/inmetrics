@@ -1,5 +1,4 @@
-# language:pt
-
+# language: pt
 class RegisterPage < SitePrism::Page
   element :title_page, '.login100-form-title'
   element :username, 'input[name="username"]'
@@ -15,7 +14,7 @@ class RegisterPage < SitePrism::Page
   element :error_message, '.p-t-13 .m-t-17'
   element :invalid_name,  '.p-t-10 .m-t-17'
   element :error_message_user, '.p-b-1 span.txt1 .m-t-17'
-    
+
   def home
     visit '/accounts/signup/'
   end
@@ -90,7 +89,7 @@ class RegisterPage < SitePrism::Page
     btn_login.click
   end
 
-  def get_text_erro_message
+  def text_erro_message
     error_message.text
   end
 end

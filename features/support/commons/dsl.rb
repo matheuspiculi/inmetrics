@@ -15,13 +15,14 @@ module Common
     embed(encoded_image, 'image/png;base64', 'SCREENSHOT')
   end
 
-  def get_tag_scenario(tags)
-    variavelTemp = tags[2]
-    tag = variavelTemp[/(?<=\@)(.*?)$/]
+  def tag_scenario(tags)
+    tag = ''
+    variavel_temp = tags[2]
+    tag = variavel_temp[/(?<=\@)(.*?)$/]
     return tag
   end
 
-  def get_text_alert_box
+  def text_alert_box
     page.driver.browser.switch_to.alert.text
   end
 

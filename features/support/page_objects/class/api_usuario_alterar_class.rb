@@ -1,4 +1,4 @@
-# language:pt
+# language: pt
 
 class UpdateUserApi
   def consult_last_register_user
@@ -44,7 +44,7 @@ class UpdateUserApi
         password: dadosyaml[$tagscenario.to_s]['password_api']
       },
       headers: {
-        "Content-Type" => 'application/json'
+        'Content-Type' => 'application/json'
       },
       body: @body
     )

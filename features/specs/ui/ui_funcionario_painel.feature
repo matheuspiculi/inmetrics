@@ -1,4 +1,4 @@
-# language:pt
+# language: pt
 
 @desafio
 @ui_painel_funcionario

@@ -1,4 +1,4 @@
-# language:pt
+# language: pt
 
 @desafio
 @api_cadastrar_usuario

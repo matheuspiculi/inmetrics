@@ -1,5 +1,5 @@
 
-# language:pt
+# language: pt
 
 @desafio
 @ui_login
@@ -12,14 +12,14 @@ Funcionalidade: [ UI ] Login
   @ui_login_sucesso
   Cenário: Realizar login com sucesso 
     Dado que esteja na página de login do site
-    Quando preencher o usuário e senha 
+    Quando preencher o usuário e senha
     E clicar em entre
     Então deverá redirecionar para a página de empregados
 
   @ui_login_sucesso_cabecalho
   Cenário: Realizar login com sucesso pelo link do cabeçalho
     Dado que esteja na página de login acessando pelo link do cabeçalho
-    Quando preencher o usuário e senha 
+    Quando preencher o usuário e senha
     E clicar em entre
     Então deverá redirecionar para a página de empregados
 

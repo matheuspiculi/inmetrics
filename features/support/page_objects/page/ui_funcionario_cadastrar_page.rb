@@ -1,4 +1,4 @@
-# language:pt
+# language: pt
 
 class NewEmployeesPage < SitePrism::Page
   element :input_name, '#inputNome'

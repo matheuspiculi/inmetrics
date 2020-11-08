@@ -1,4 +1,4 @@
-# language:pt
+# language: pt
 
 class PanelEmployeesPage < SitePrism::Page
   elements :colunasTabela, '#tabela > thead > tr > th'

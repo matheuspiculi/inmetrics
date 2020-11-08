@@ -1,4 +1,4 @@
-# language:pt
+# language: pt
 
 class ConsultUserApi
   def consult_all(url)
@@ -10,12 +10,12 @@ class ConsultUserApi
         password: dadosyaml[$tagscenario.to_s]['password_api']
       },
       headers: {
-        "Content-Type" => 'application/json'
+        'Content-Type' => 'application/json'
       }
     )
   end
 
-  def consult_empregado(url,emp)
+  def consult_empregado(url, emp)
     dadosyaml = load_data_test('api')
     @response = HTTParty.get(
       "#{$baseurl_api}#{url}/#{emp}",
@@ -24,7 +24,7 @@ class ConsultUserApi
         password: dadosyaml[$tagscenario.to_s]['password_api']
       },
       headers: {
-        "Content-Type" => 'application/json'
+        'Content-Type' => 'application/json'
       }
     )
   end

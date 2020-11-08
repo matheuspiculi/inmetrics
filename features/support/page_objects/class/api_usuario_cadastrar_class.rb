@@ -1,7 +1,7 @@
-# language:pt
+# language: pt
 
 class NewUserApi
-  def data_new_user
+  def data_newuser
     dadosyaml = load_data_test('api')
     @body = {
       "admissao": dadosyaml[$tagscenario.to_s]['admissao'],
@@ -16,7 +16,7 @@ class NewUserApi
     }.to_json
   end
 
-  def data_new_user_invalid(user_new)
+  def data_newuser_invalid(user_new)
     @body = {
       "admissao": user_new[:admissao],
       "cargo": user_new[:cargo],
@@ -39,7 +39,7 @@ class NewUserApi
         password: dadosyaml[$tagscenario.to_s]['password_api']
       },
       headers: {
-        "Content-Type" => 'application/json'
+        'Content-Type' => 'application/json'
       },
       body: @body
     )
@@ -54,7 +54,7 @@ class NewUserApi
   end
 
   def record_user_response
-    record_user_response = YAML.load_file(File.join(Dir.pwd, "/features/support/data/api_data.yaml"))
+    record_user_response = YAML.load_file(File.join(Dir.pwd, '/features/support/data/api_data.yaml'))
     record_user_response['last_id_user_api']['nome'] = @response['nome']
     record_user_response['last_id_user_api']['cpf'] = @response['cpf']
     record_user_response['last_id_user_api']['id'] = @response['empregadoId']

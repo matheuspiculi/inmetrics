@@ -1,4 +1,4 @@
-# language:pt
+# language: pt
 
 class DeleteEmployeesPage < SitePrism::Page
   element :message_success, '.alert.alert-success'

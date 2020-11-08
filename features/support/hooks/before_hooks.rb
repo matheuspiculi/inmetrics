@@ -14,53 +14,53 @@ Before do |scenario|
   @consult_user_api = ConsultUserApi.new
 
   # tag_scenario
-  $tagscenario = get_tag_scenario(scenario.source_tag_names)
+  $tagscenario = tag_scenario(scenario.source_tag_names)
 end
 
 Before('@ui_excluir_funcionario_sucesso') do
-  @new_user_api.data_new_user
+  @new_user_api.data_newuser
   @new_user_api.post_data('empregado/cadastrar')
   @new_user_api.record_user_response
   sleep 2
 end
 
 Before('@ui_editar_funcionario_parcial_sucesso_painel') do
-  @new_user_api.data_new_user
+  @new_user_api.data_newuser
   @new_user_api.post_data('empregado/cadastrar')
   @new_user_api.record_user_response
   sleep 2
 end
 
 Before('@ui_editar_funcionario_parcial_sucesso_individual') do
-  @new_user_api.data_new_user
+  @new_user_api.data_newuser
   @new_user_api.post_data('empregado/cadastrar')
   @new_user_api.record_user_response
   sleep 2
 end
 
 Before('@api_alterar_usuario_401') do
-  @new_user_api.data_new_user
+  @new_user_api.data_newuser
   @new_user_api.post_data('empregado/cadastrar')
   @new_user_api.record_user_response
   sleep 2
 end
 
 Before('@api_alterar_usuario_404') do
-  @new_user_api.data_new_user
+  @new_user_api.data_newuser
   @new_user_api.post_data('empregado/cadastrar')
   @new_user_api.record_user_response
   sleep 2
 end
 
 Before('@api_alterar_usuario_405') do
-  @new_user_api.data_new_user
+  @new_user_api.data_newuser
   @new_user_api.post_data('empregado/cadastrar')
   @new_user_api.record_user_response
   sleep 2
 end
 
 Before('@api_alterar_usuario_informacoes_invalidas') do
-  @new_user_api.data_new_user
+  @new_user_api.data_newuser
   @new_user_api.post_data('empregado/cadastrar')
   @new_user_api.record_user_response
   sleep 2

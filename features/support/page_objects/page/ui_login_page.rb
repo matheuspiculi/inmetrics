@@ -1,4 +1,4 @@
-# language:pt
+# language: pt
 
 class LoginPage < SitePrism::Page
   element :title_page, '.login100-form-title'

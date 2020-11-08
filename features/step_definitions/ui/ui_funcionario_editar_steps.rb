@@ -1,12 +1,12 @@
-# language:pt
+# language: pt
 
 Quando('pesquiso pelo usuário {string} para realizar a alteração') do |name|
-  @edit_employee = name  
+  @edit_employee = name
   @home.search_name_employee(@edit_employee)
 end
 
-E("clico no ícone de edição do primeiro usuário encontrado") do
-  @home.click_edit_employee    
+E('clico no ícone de edição do primeiro usuário encontrado') do
+  @home.click_edit_employee
 end
 
 Quando('clicar no ícone de edição do primeiro usuário encontrado') do
@@ -19,7 +19,7 @@ Quando('alterar as seguintes informações de cargo {string} e admissão {string
   @edit_employees.edit_fill_form_employes(@edit_office, @edit_admission)
 end
 
-Então('as alterações deverão ter sido modificadas via painel') do
+Entao('as alterações deverão ter sido modificadas via painel') do
   steps %{
     Quando pesquisar pelo usuário cadastrado
   }
@@ -27,10 +27,10 @@ Então('as alterações deverão ter sido modificadas via painel') do
   expect(@employees.value_table[4].text).to eql(@edit_admission)
 end
 
-Então('as alterações deverão ter sido modificadas via editar') do
+Entao('as alterações deverão ter sido modificadas via editar') do
   steps %{
     E clico no ícone de edição do primeiro usuário encontrado
   }
-  expect(@edit_employees.get_text_cargo).to eql(@edit_office)
-  expect(@edit_employees.get_text_admissao).to eql(@edit_admission)
+  expect(@edit_employees.text_cargo).to eql(@edit_office)
+  expect(@edit_employees.text_admissao).to eql(@edit_admission)
 end
