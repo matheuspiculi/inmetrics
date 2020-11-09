@@ -32,6 +32,7 @@ end
 
 Entao('as alterações deverão ter sido modificadas via editar') do
   steps %{
+    Quando pesquisar pelo usuário cadastrado
     E clico no ícone de edição do primeiro usuário encontrado
   }
   expect(@edit_employees.text_nome).to eql(@userdel['last_id_user_api']['nome'])

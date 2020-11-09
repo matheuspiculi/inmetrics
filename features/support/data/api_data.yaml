@@ -2,14 +2,14 @@
 last_id_user_api:
   admissao: 20/08/2020
   cargo: desenvolvedor
-  comissao: 150.00,00
-  cpf: 041.711.406-09
+  comissao: 150.000,00
+  cpf: '083.381.987-90'
   departamentoId: 
-  nome: Vicente Labadie
-  salario: 150.00,00
+  nome: Keli Satterfield
+  salario: 150.000,00
   sexo: m
   tipoContratacao: pj
-  id: 5586
+  id: 5652
 deleteuser:
   username_api: inmetrics
   password_api: automacao
