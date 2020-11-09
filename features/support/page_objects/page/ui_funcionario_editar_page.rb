@@ -17,7 +17,7 @@ class EditEmployeesPage < SitePrism::Page
   end
 
   def text_nome
-    input_nome.value
+    input_name.value
   end
 
   def text_cpf
@@ -29,7 +29,7 @@ class EditEmployeesPage < SitePrism::Page
   end
 
   def text_admissao
-    input_office.value
+    input_admission.value
   end
 
   def text_cargo
